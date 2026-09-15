@@ -1,0 +1,29 @@
+# Heavy Local Video (Streamed via Google Drive)
+20260915_034428_1.mp4
+nands/20260915_034428_1.mp4
+Nandu's 18th/
+
+# Python / Environment
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.env
+.venv
+env/
+venv/
+ENV/
+server.py
+
+# Scratch & Dev Utilities (not needed in production)
+scratch/
+start_server.bat
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~

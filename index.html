@@ -1,0 +1,2801 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy 18th Birthday, Nandika! ✨🌸</title>
+  <meta name="description" content="A magical, interactive birthday scrapbook and celebration for Nandika.">
+  <meta name="theme-color" content="#FEF9F2">
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎂</text></svg>">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Happy 18th Birthday, Nandika! ✨🌸">
+  <meta property="og:description"
+    content="A magical, interactive birthday scrapbook and celebration for Nandika. Made with endless love by Mithun.">
+  <meta property="og:image" content="nands/IMG-20260626-WA0036.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#665590",
+            "primary-container": "#d0bcff",
+            "primary-fixed": "#e9ddff",
+            "secondary": "#805062",
+            "secondary-container": "#fec1d6",
+            "secondary-fixed": "#ffd9e4",
+            "tertiary": "#755844",
+            "tertiary-container": "#ffdcc5",
+            "background": "#fef9f2",
+            "surface": "#fef9f2",
+            "surface-container": "#f2ede6",
+            "surface-container-low": "#f8f3ec",
+            "surface-container-high": "#ece7e1",
+            "surface-container-lowest": "#ffffff",
+            "on-surface": "#1d1c18",
+            "on-surface-variant": "#49454f",
+            "berry": "#880E4F",
+            "berry-soft": "#C2185B",
+            "peach": "#FFD8BE",
+            "lavender": "#E8DEF8"
+          },
+          fontFamily: {
+            display: ["'Playfair Display'", "serif"],
+            body: ["'Plus Jakarta Sans'", "sans-serif"],
+            heading: ["'Playfair Display'", "serif"],
+            label: ["'Quicksand'", "sans-serif"],
+            handwriting: ["'Caveat'", "cursive"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="stylesheet" href="style.css?v=prod_v1">
+</head>
+
+<body
+  class="bg-[#FEF9F2] text-[#1D1C18] font-body min-h-screen relative overflow-x-hidden selection:bg-[#FEC1D6] selection:text-[#7B4C5E]">
+
+  <!-- Sparkle Particle Canvas -->
+  <canvas id="sparkleCanvas" class="pointer-events-none fixed inset-0 z-30"></canvas>
+  <!-- Full Screen Confetti Canvas -->
+  <canvas id="confettiCanvas" class="pointer-events-none fixed inset-0 z-[110]"></canvas>
+
+  <!-- CUTE BIRTHDAY INTRO EXPERIENCE -->
+  <div id="introOverlay" onclick="handleIntroOverlayClick(event)"
+    class="fixed inset-0 z-[200] flex items-center justify-center bg-[#FEF9F2] overflow-hidden select-none transition-all duration-700">
+
+    <!-- Dreamy Soft Background Glows & Floating Particles -->
+    <div class="intro-bg-ambient absolute inset-0 pointer-events-none">
+      <div class="intro-glow-circle intro-glow-1"></div>
+      <div class="intro-glow-circle intro-glow-2"></div>
+      <div class="intro-glow-circle intro-glow-3"></div>
+      <div id="introFloatingHearts" class="absolute inset-0 overflow-hidden"></div>
+    </div>
+
+    <!-- Cute Skip Button (Top-Right) -->
+    <button id="introSkipBtn" onclick="event.stopPropagation(); skipIntroToWebsite();" aria-label="Skip Intro"
+      class="absolute top-4 right-4 sm:top-6 sm:right-6 z-30 px-4 py-1.5 rounded-full bg-white/80 hover:bg-white text-[#805062] border border-[#FFD9E4] font-label font-bold text-xs backdrop-blur-md shadow-xs transition-all hover:scale-105 active:scale-95 flex items-center gap-1.5 cursor-pointer">
+      <span>Skip to Website</span>
+      <span class="text-sm">🌸➔</span>
+    </button>
+
+    <!-- INTRO STAGE CONTAINER - WIDE HORIZONTAL THEATER -->
+    <div id="introStage"
+      class="relative z-10 w-full max-w-5xl xl:max-w-6xl px-2 sm:px-6 flex flex-col items-center justify-center text-center">
+
+      <!-- PHASE 1: Happy birthday my love -->
+      <div id="introPhase1" class="intro-phase-panel space-y-4 intro-phase-enter max-w-2xl mx-auto">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFD9E4]/70 text-[#805062] text-xs font-label font-bold border border-[#F2B6CB]/50 shadow-xs animate-bounce">
+          <span>✨</span>
+          <span>Pakki Bears bday</span>
+          <span>✨</span>
+        </div>
+
+        <div class="relative py-2">
+          <h1
+            class="text-4xl sm:text-6xl md:text-7xl font-display font-bold text-[#880E4F] tracking-tight drop-shadow-sm leading-tight">
+            Happy birthday <br class="hidden sm:inline" /><span
+              class="font-handwriting text-5xl sm:text-7xl md:text-8xl text-[#C2185B] inline-block hover:scale-105 transition-transform">Nandu
+              baby</span>
+          </h1>
+          <div class="intro-sparkle-stars mt-3 text-2xl sm:text-3xl animate-pulse">💖 🌸 🎂 🌸 💖</div>
+        </div>
+
+        <p class="text-sm sm:text-base font-handwriting text-[#805062] font-semibold tracking-wide max-w-md mx-auto">
+          Not much but something that I though was cute ✨
+        </p>
+
+
+
+        <div class="pt-3">
+          <button id="introStartMusicBtn" onclick="handleIntroStartClick()"
+            class="px-8 sm:px-10 py-3.5 bg-gradient-to-r from-[#FF4081] via-[#E91E63] to-[#880E4F] text-white font-label font-bold text-sm sm:text-base rounded-full shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center space-x-2.5 mx-auto cursor-pointer animate-pulse hover:animate-none border-2 border-white">
+            <span class="text-xl">✨</span>
+            <span id="introStartBtnText">Tap to Enter Website 💖➔</span>
+            <span class="text-xl">✨</span>
+          </button>
+          <p class="text-[11px] text-[#A8748A] pt-2 font-medium">Half assed website with barely any sleep yay ✨</p>
+        </div>
+      </div>
+
+      <!-- PHASE 2: I hope you enjoy this. -->
+      <div id="introPhase2" class="intro-phase-panel space-y-4 hidden opacity-0 max-w-2xl mx-auto">
+        <div
+          class="w-16 h-16 sm:w-20 sm:h-20 mx-auto rounded-full bg-[#FFE2EC] border-2 border-[#FF80AB] flex items-center justify-center text-3xl sm:text-4xl shadow-md intro-heart-bounce">
+          💌
+        </div>
+
+        <div class="relative py-2">
+          <h2
+            class="text-3xl sm:text-5xl md:text-6xl font-display font-bold text-[#805062] tracking-tight drop-shadow-sm leading-snug">
+            I hope you <span class="font-handwriting text-4xl sm:text-6xl text-[#880E4F]">enjoy this.</span> 🥺
+          </h2>
+          <div class="washi-tape-peach h-3 w-36 mx-auto rounded-sm mt-3 opacity-90"></div>
+        </div>
+
+        <p class="text-sm sm:text-base font-handwriting text-[#7B4C5E] font-bold max-w-md mx-auto">
+          Please turn up your volume 🎶💖
+        </p>
+
+        <div class="pt-2">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/80 border border-[#EAE4DB] text-[11px] font-label font-semibold text-[#805062]">
+            <span>✨</span>
+            <span>Get ready pooks...</span>
+            <span>✨</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 3: Video Showcase (Google Drive Stream) - BIG WIDESCREEN CINEMA VIEW -->
+      <div id="introPhase3" class="intro-phase-panel w-full max-w-5xl xl:max-w-6xl mx-auto hidden opacity-0">
+        <!-- Cute Large Horizontal Cinema Card -->
+        <div
+          class="intro-video-card bg-white p-3 sm:p-5 pb-4 sm:pb-6 rounded-3xl polaroid-shadow border-2 border-[#FFD9E4] relative transition-all">
+          <!-- Cute decorative washi tape -->
+          <div class="washi-tape-lavender absolute -top-3 left-1/2 -translate-x-1/2 w-36 h-5 rounded-xs z-20"></div>
+
+          <!-- Frame Top Banner -->
+          <div class="flex items-center justify-between px-2 pt-1 pb-2.5 border-b border-[#F2EDE6] mb-2.5">
+            <div class="flex items-center gap-2 text-xs sm:text-sm font-label font-bold text-[#805062]">
+              <span class="animate-spin text-sm">🌸</span>
+              <span>A small video</span>
+              <span class="hidden sm:inline text-[#C2185B] font-handwriting text-base"> I was half asleep so forgive
+                💖</span>
+            </div>
+            <button onclick="finishIntroAndEnterWebsite()" title="Skip Video"
+              class="text-[11px] sm:text-xs font-label font-semibold text-[#A87B8D] hover:text-[#C2185B] hover:underline cursor-pointer flex items-center gap-1 transition-colors">
+              <span>Skip Video</span>
+              <span>➔</span>
+            </button>
+          </div>
+
+          <!-- Big Horizontal 16:9 Cinema Video Wrapper with Google Drive Player -->
+          <div
+            class="relative w-full aspect-video max-h-[70vh] sm:max-h-[75vh] md:max-h-[80vh] rounded-2xl sm:rounded-3xl overflow-hidden bg-black shadow-2xl flex items-center justify-center border border-white/15">
+            <iframe id="introDriveFrame"
+              src="https://drive.google.com/file/d/1QF1tF-A2dV-rgpFY-JpOcYea-D9Cj2iy/preview"
+              class="w-full h-full border-0 absolute inset-0"
+              allow="autoplay; encrypted-media; fullscreen"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <!-- Bottom Action & Navigation Bar -->
+          <div class="pt-3 px-2 flex flex-wrap items-center justify-between gap-2 border-t border-[#F2EDE6] mt-3">
+            <div class="flex items-center gap-2 text-xs font-label font-bold text-[#805062]">
+              <span class="text-sm">▶️</span>
+              <span>Tap play above to watch! 💖</span>
+              <span class="hidden md:inline text-pink-400 font-handwriting text-sm">(or enter anytime below)</span>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button onclick="finishIntroAndEnterWebsite()"
+                class="px-5 sm:px-6 py-2 sm:py-2.5 bg-gradient-to-r from-[#FF4081] via-[#E91E63] to-[#880E4F] hover:opacity-95 text-white text-xs sm:text-sm font-label font-bold rounded-full shadow-lg hover:scale-105 active:scale-95 transition-all flex items-center gap-2 cursor-pointer">
+                <span>Enter Scrapbook</span>
+                <span>✨➔</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SIDEBAR BACKDROP OVERLAY -->
+  <div id="sidebarBackdrop" onclick="closeSidebar()"
+    class="fixed inset-0 bg-[#1D1C18]/30 backdrop-blur-sm z-[70] opacity-0 pointer-events-none transition-opacity duration-300">
+  </div>
+
+  <!-- CUTE COLLAPSIBLE SIDEBAR -->
+  <aside id="collapsibleSidebar"
+    class="sidebar-drawer fixed top-0 left-0 h-full w-[310px] sm:w-[350px] max-w-[86vw] bg-[#FEF9F2]/95 backdrop-blur-2xl z-[75] border-r border-[#E8DEF8] flex flex-col justify-between overflow-hidden polaroid-shadow">
+
+    <!-- Sidebar Header & Washi Accent -->
+    <div class="pt-3 pb-3 px-4 border-b border-[#F2EDE6] relative bg-[#FEF9F2]/90">
+      <!-- Decorative Mini Washi Tape -->
+      <div class="washi-tape-peach h-2.5 w-24 mx-auto rounded-b-sm opacity-80 mb-2"></div>
+
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <div class="relative">
+            <img src="nands/IMG-20260625-WA0001.jpg" alt="Sassy hair whip kung-fu 💁‍♀️🥋"
+              class="w-11 h-11 rounded-full object-cover border-2 border-[#805062] shadow-sm hover:scale-105 transition-transform">
+            <span class="absolute -bottom-1 -right-1 text-xs">👑</span>
+          </div>
+          <div>
+            <h2 class="font-display font-bold text-base sm:text-lg text-[#805062] leading-tight">Nandika's 18th ✨</h2>
+            <p class="font-handwriting text-sm sm:text-base text-[#7B4C5E]">Sassy hair whip kung-fu 💁‍♀️🥋</p>
+          </div>
+        </div>
+
+        <!-- Cute Close Button -->
+        <button id="closeSidebarBtn" onclick="closeSidebar()" aria-label="Close Menu"
+          class="w-8 h-8 rounded-full bg-[#FFD9E4]/60 hover:bg-[#FFD9E4] text-[#805062] flex items-center justify-center hover:rotate-90 transition-all duration-300 active:scale-90">
+          <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Scrollable Scrapbook Navigation -->
+    <nav class="cute-scrollbar overflow-y-auto px-3.5 py-3 space-y-1.5 flex-1" id="sidebarNavList">
+
+      <!-- Replay Intro Reel Button -->
+      <button onclick="closeSidebar(); replayIntro();"
+        class="w-full flex items-center justify-between p-2.5 rounded-2xl bg-[#FFE2EC]/80 hover:bg-[#FFD9E4] text-[#805062] border border-[#F2B6CB]/60 shadow-xs hover:scale-[1.02] active:scale-98 transition-all group mb-2 cursor-pointer">
+        <div class="flex items-center space-x-3">
+          <span
+            class="w-8 h-8 rounded-xl bg-white flex items-center justify-center text-sm shadow-xs group-hover:rotate-12 transition-transform">🎬</span>
+          <div class="text-left">
+            <span class="font-label font-bold text-xs text-[#880E4F] block leading-tight">Replay Birthday Intro</span>
+            <span class="text-[10px] text-[#805062]/80 font-normal">Watch the intro reel again ✨</span>
+          </div>
+        </div>
+        <span
+          class="material-symbols-outlined text-base text-[#880E4F] group-hover:translate-x-0.5 transition-all">play_circle</span>
+      </button>
+
+      <div
+        class="px-2 py-1 text-[11px] font-label font-bold text-[#805062]/70 tracking-wider uppercase flex items-center justify-between">
+        <span>Chapters & Keepsakes</span>
+        <span class="text-xs">🌸</span>
+      </div>
+
+      <!-- 1. Hero / Welcome -->
+      <a href="#hero" onclick="handleNavClick(event, '#hero')"
+        class="sidebar-nav-item flex items-center justify-between p-2.5 rounded-2xl hover:bg-[#FFD9E4]/60 hover:translate-x-1 transition-all border border-transparent hover:border-[#F2B6CB]/50 group"
+        data-section="hero">
+        <div class="flex items-center space-x-3">
+          <span
+            class="w-8 h-8 rounded-xl bg-[#FFE2EC] flex items-center justify-center text-sm shadow-xs group-hover:scale-110 transition-transform">🌸</span>
+          <div>
+            <span
+              class="font-label font-bold text-sm text-[#49454F] group-hover:text-[#805062] block leading-tight">Chapter
+              18</span>
+            <span class="text-[11px] text-[#7A7580] font-normal">Hi my love</span>
+          </div>
+        </div>
+        <span
+          class="material-symbols-outlined text-xs text-[#805062]/40 group-hover:text-[#805062] group-hover:translate-x-0.5 transition-all">chevron_right</span>
+      </a>
+
+      <!-- 2. Memories / Scrapbook -->
+      <a href="#memories" onclick="handleNavClick(event, '#memories')"
+        class="sidebar-nav-item flex items-center justify-between p-2.5 rounded-2xl hover:bg-[#FFD9E4]/60 hover:translate-x-1 transition-all border border-transparent hover:border-[#F2B6CB]/50 group"
+        data-section="memories">
+        <div class="flex items-center space-x-3">
+          <span
+            class="w-8 h-8 rounded-xl bg-[#E8DEF8] flex items-center justify-center text-sm shadow-xs group-hover:scale-110 transition-transform">📸</span>
+          <div>
+            <span
+              class="font-label font-bold text-sm text-[#49454F] group-hover:text-[#805062] block leading-tight">Polaroid
+              Wall</span>
+            <span class="text-[11px] text-[#7A7580] font-normal">60+ Scattered Shit</span>
+          </div>
+        </div>
+        <span
+          class="material-symbols-outlined text-xs text-[#805062]/40 group-hover:text-[#805062] group-hover:translate-x-0.5 transition-all">chevron_right</span>
+      </a>
+
+      <!-- 3. Vintage Reels -->
+      <a href="#reels" onclick="handleNavClick(event, '#reels')"
+        class="sidebar-nav-item flex items-center justify-between p-2.5 rounded-2xl hover:bg-[#FFD9E4]/60 hover:translate-x-1 transition-all border border-transparent hover:border-[#F2B6CB]/50 group"
+        data-section="reels">
+        <div class="flex items-center space-x-3">
+          <span
+            class="w-8 h-8 rounded-xl bg-[#FFE4D6] flex items-center justify-center text-sm shadow-xs group-hover:scale-110 transition-transform">🎬</span>
+          <div>
+            <span
+              class="font-label font-bold text-sm text-[#49454F] group-hover:text-[#805062] block leading-tight">Same
+              random vids</span>
+            <span class="text-[11px] text-[#7A7580] font-normal">Picked out from my camera roll</span>
+          </div>
+        </div>
+        <span
+          class="material-symbols-outlined text-xs text-[#805062]/40 group-hover:text-[#805062] group-hover:translate-x-0.5 transition-all">chevron_right</span>
+      </a>
+
+      <!-- 4. Birthday Wishes & Cake -->
+      <a href="#candles" onclick="handleNavClick(event, '#candles')"
+        class="sidebar-nav-item flex items-center justify-between p-2.5 rounded-2xl hover:bg-[#FFD9E4]/60 hover:translate-x-1 transition-all border border-transparent hover:border-[#F2B6CB]/50 group"
+        data-section="candles">
+        <div class="flex items-center space-x-3">
+          <span
+            class="w-8 h-8 rounded-xl bg-[#FFF3D6] flex items-center justify-center text-sm shadow-xs group-hover:scale-110 transition-transform">🎂</span>
+          <div>
+            <span class="font-label font-bold text-sm text-[#49454F] group-hover:text-[#805062] block leading-tight">Cut
+              your cake</span>
+            <span class="text-[11px] text-[#7A7580] font-normal">Blow out the candles</span>
+          </div>
+        </div>
+        <span
+          class="material-symbols-outlined text-xs text-[#805062]/40 group-hover:text-[#805062] group-hover:translate-x-0.5 transition-all">chevron_right</span>
+      </a>
+
+      <!-- 5. Bestie Quiz -->
+      <a href="#trivia" onclick="handleNavClick(event, '#trivia')"
+        class="sidebar-nav-item flex items-center justify-between p-2.5 rounded-2xl hover:bg-[#FFD9E4]/60 hover:translate-x-1 transition-all border border-transparent hover:border-[#F2B6CB]/50 group"
+        data-section="trivia">
+        <div class="flex items-center space-x-3">
+          <span
+            class="w-8 h-8 rounded-xl bg-[#E2F0D9] flex items-center justify-center text-sm shadow-xs group-hover:scale-110 transition-transform">🧠</span>
+          <div>
+            <span
+              class="font-label font-bold text-sm text-[#49454F] group-hover:text-[#805062] block leading-tight">Random
+              Quiz</span>
+            <span class="text-[11px] text-[#7A7580] font-normal">Questions that idk</span>
+          </div>
+        </div>
+        <span
+          class="material-symbols-outlined text-xs text-[#805062]/40 group-hover:text-[#805062] group-hover:translate-x-0.5 transition-all">chevron_right</span>
+      </a>
+
+      <!-- 6. Heart Catch Arcade -->
+      <a href="#mini-arcade" onclick="handleNavClick(event, '#mini-arcade')"
+        class="sidebar-nav-item flex items-center justify-between p-2.5 rounded-2xl hover:bg-[#FFD9E4]/60 hover:translate-x-1 transition-all border border-transparent hover:border-[#F2B6CB]/50 group"
+        data-section="mini-arcade">
+        <div class="flex items-center space-x-3">
+          <span
+            class="w-8 h-8 rounded-xl bg-[#FFDFE5] flex items-center justify-center text-sm shadow-xs group-hover:scale-110 transition-transform">🎮</span>
+          <div>
+            <span class="font-label font-bold text-sm text-[#49454F] group-hover:text-[#805062] block leading-tight">BIG
+              GAME LOL</span>
+            <span class="text-[11px] text-[#7A7580] font-normal">Just play it bro</span>
+          </div>
+        </div>
+        <span
+          class="material-symbols-outlined text-xs text-[#805062]/40 group-hover:text-[#805062] group-hover:translate-x-0.5 transition-all">chevron_right</span>
+      </a>
+
+      <!-- 6B. Sweet Word Search -->
+      <a href="#word-search" onclick="handleNavClick(event, '#word-search')"
+        class="sidebar-nav-item flex items-center justify-between p-2.5 rounded-2xl hover:bg-[#FFD9E4]/60 hover:translate-x-1 transition-all border border-transparent hover:border-[#F2B6CB]/50 group"
+        data-section="word-search">
+        <div class="flex items-center space-x-3">
+          <span
+            class="w-8 h-8 rounded-xl bg-[#FFF0D4] flex items-center justify-center text-sm shadow-xs group-hover:scale-110 transition-transform">🔍</span>
+          <div>
+            <span
+              class="font-label font-bold text-sm text-[#49454F] group-hover:text-[#805062] block leading-tight">Word
+              Search</span>
+            <span class="text-[11px] text-[#7A7580] font-normal">7 Words</span>
+          </div>
+        </div>
+        <span
+          class="material-symbols-outlined text-xs text-[#805062]/40 group-hover:text-[#805062] group-hover:translate-x-0.5 transition-all">chevron_right</span>
+      </a>
+
+      <!-- 7. Vouchers -->
+      <a href="#vouchers" onclick="handleNavClick(event, '#vouchers')"
+        class="sidebar-nav-item flex items-center justify-between p-2.5 rounded-2xl hover:bg-[#FFD9E4]/60 hover:translate-x-1 transition-all border border-transparent hover:border-[#F2B6CB]/50 group"
+        data-section="vouchers">
+        <div class="flex items-center space-x-3">
+          <span
+            class="w-8 h-8 rounded-xl bg-[#EBE5FC] flex items-center justify-center text-sm shadow-xs group-hover:scale-110 transition-transform">🎟️</span>
+          <div>
+            <span
+              class="font-label font-bold text-sm text-[#49454F] group-hover:text-[#805062] block leading-tight">Birthday
+              Vouchers</span>
+            <span class="text-[11px] text-[#7A7580] font-normal">Scratch & Redeem Treats</span>
+          </div>
+        </div>
+        <span
+          class="material-symbols-outlined text-xs text-[#805062]/40 group-hover:text-[#805062] group-hover:translate-x-0.5 transition-all">chevron_right</span>
+      </a>
+
+      <!-- 8. Love Letter -->
+      <a href="#giftbox" onclick="handleNavClick(event, '#giftbox')"
+        class="sidebar-nav-item flex items-center justify-between p-2.5 rounded-2xl hover:bg-[#FFD9E4]/60 hover:translate-x-1 transition-all border border-transparent hover:border-[#F2B6CB]/50 group"
+        data-section="giftbox">
+        <div class="flex items-center space-x-3">
+          <span
+            class="w-8 h-8 rounded-xl bg-[#FFE6E6] flex items-center justify-center text-sm shadow-xs group-hover:scale-110 transition-transform">💌</span>
+          <div>
+            <span
+              class="font-label font-bold text-sm text-[#49454F] group-hover:text-[#805062] block leading-tight">Secret
+              Love Letter</span>
+            <span class="text-[11px] text-[#7A7580] font-normal">Not really a secret</span>
+          </div>
+        </div>
+        <span
+          class="material-symbols-outlined text-xs text-[#805062]/40 group-hover:text-[#805062] group-hover:translate-x-0.5 transition-all">chevron_right</span>
+      </a>
+
+      <!-- 9. Grand Finale: Till Death Do Us Apart (Special Romantic Item) -->
+      <div class="pt-1.5 pb-0.5">
+        <a href="#forever" onclick="handleNavClick(event, '#forever')"
+          class="sidebar-nav-item flex items-center justify-between p-2.5 rounded-2xl bg-gradient-to-r from-[#FFD9E4]/80 to-[#FFE4D6]/80 hover:from-[#FFCCD9] hover:to-[#FFD8C4] hover:translate-x-1 transition-all border-2 border-[#F2B6CB] shadow-sm group"
+          data-section="forever">
+          <div class="flex items-center space-x-3">
+            <span
+              class="w-8 h-8 rounded-xl bg-[#880E4F] text-white flex items-center justify-center text-sm shadow-xs group-hover:scale-110 transition-transform heartbeat-pulse">💍</span>
+            <div>
+              <span class="font-display font-bold text-sm text-[#880E4F] block leading-tight">Till Death Do Us
+                Apart</span>
+              <span class="text-[11px] text-[#65394B] font-semibold">Our Eternal Promise 💕</span>
+            </div>
+          </div>
+          <span class="text-xs">✨</span>
+        </a>
+      </div>
+
+      <!-- Quick Modal Shortcuts -->
+      <div class="pt-2 border-t border-[#F2EDE6]/80 flex items-center space-x-2">
+        <button onclick="openAllPhotosGallery(); closeSidebar();"
+          class="flex-1 py-1.5 px-2 bg-[#F2EDE6]/80 hover:bg-[#FFD9E4]/60 text-[#665590] hover:text-[#805062] rounded-xl text-xs font-label font-semibold flex items-center justify-center space-x-1 transition-colors">
+          <span>🖼️ All Photos</span>
+        </button>
+        <button onclick="handleNavClick(event, '#reels');"
+          class="flex-1 py-1.5 px-2 bg-[#F2EDE6]/80 hover:bg-[#FFE4D6]/70 text-[#665590] hover:text-[#805062] rounded-xl text-xs font-label font-semibold flex items-center justify-center space-x-1 transition-colors">
+          <span>🎞️ Video Reel</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Sidebar Bottom Controls & Dedication -->
+    <div class="p-3.5 border-t border-[#F2EDE6] bg-[#FEF9F2] space-y-2.5">
+      <!-- Mini Lo-Fi Music Box Player Widget -->
+      <div class="bg-[#F8F3EC] rounded-2xl p-2.5 border border-[#EAE4DB] flex items-center justify-between">
+        <div class="flex items-center space-x-2.5">
+          <div class="w-7 h-7 rounded-full bg-[#FFD9E4] flex items-center justify-center text-[#805062]"
+            id="sidebarMusicIconBadge">
+            <div class="flex items-end space-x-0.5 h-3.5" id="sidebarEqBars">
+              <span class="eq-bar w-[2.5px] h-2"></span>
+              <span class="eq-bar w-[2.5px] h-3.5"></span>
+              <span class="eq-bar w-[2.5px] h-1.5"></span>
+            </div>
+          </div>
+          <div>
+            <p class="text-xs font-label font-bold text-[#805062] leading-tight" id="sidebarMusicStatus">Lo-Fi Music Box
+            </p>
+            <p class="text-[10px] text-[#7A7580]" id="sidebarMusicSubtitle">Click play for birthday tunes</p>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-1">
+          <button id="sidebarAudioBtn" class="p-1.5 text-[#805062] hover:bg-[#FFD9E4]/80 rounded-full transition-colors"
+            title="Play/Pause Music">
+            <span class="material-symbols-outlined text-lg" id="sidebarAudioIcon">play_arrow</span>
+          </button>
+          <button id="sidebarSoundFxBtn"
+            class="p-1.5 text-[#805062] hover:bg-[#FFD9E4]/80 rounded-full transition-colors" title="Toggle Sound FX">
+            <span class="material-symbols-outlined text-lg" id="sidebarSoundFxIcon">volume_up</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Shower Confetti Action Button -->
+      <button onclick="launchConfettiBurst(); closeSidebar();"
+        class="w-full py-2 bg-[#805062] hover:bg-[#65394B] text-white rounded-xl font-label font-bold text-xs tracking-wide transition-all hover:scale-[1.02] active:scale-95 shadow-sm flex items-center justify-center space-x-1.5">
+        <span>Shower Nandika with Confetti</span>
+        <span>🎉</span>
+      </button>
+
+      <!-- Sweet Footer Note -->
+      <p class="text-[11px] text-center font-handwriting text-[#7B4C5E]">Made with love by @Miithuu 💖</p>
+    </div>
+  </aside>
+
+  <!-- FLOATING TRIGGER BUTTON (TOP LEFT) -->
+  <div class="fixed top-3.5 left-3.5 sm:top-5 sm:left-6 z-40">
+    <button id="sidebarToggleBtn" onclick="toggleSidebar()" aria-label="Open Scrapbook Menu"
+      class="flex items-center space-x-2 sm:space-x-2.5 px-3 py-2 sm:px-4 sm:py-2.5 rounded-full bg-[#FEF9F2]/90 backdrop-blur-md border border-[#E8DEF8] polaroid-shadow hover:scale-105 active:scale-95 transition-all text-[#805062] group font-label font-bold text-xs sm:text-sm shadow-md hover:bg-white hover:border-[#805062]/30">
+      <span
+        class="inline-flex items-center justify-center w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#FFD9E4] text-[#805062] text-xs sm:text-sm group-hover:rotate-12 transition-transform shadow-inner">
+        🌸
+      </span>
+      <span class="font-display font-bold text-xs sm:text-sm text-[#805062] tracking-wide">Nandika's 18th</span>
+      <span
+        class="text-[10px] sm:text-xs bg-[#E8DEF8]/80 text-[#665590] px-2 py-0.5 rounded-full font-label font-semibold flex items-center space-x-1">
+        <span>Menu</span>
+        <span>🎀</span>
+      </span>
+    </button>
+  </div>
+
+  <!-- FLOATING QUICK CONTROLS (TOP RIGHT) -->
+  <div
+    class="fixed top-3.5 right-3.5 sm:top-5 sm:right-6 z-40 flex items-center space-x-1.5 sm:space-x-2 bg-[#FEF9F2]/90 backdrop-blur-md border border-[#E8DEF8] rounded-full px-2 py-1 sm:px-3 sm:py-1.5 polaroid-shadow shadow-md">
+    <button id="audioControlBtn"
+      class="p-1.5 sm:p-2 text-[#665590] hover:text-[#805062] rounded-full hover:bg-[#FFD9E4]/60 transition-all hover:scale-110 active:scale-95 flex items-center"
+      title="Toggle Lo-Fi Music Box">
+      <span class="material-symbols-outlined text-lg sm:text-xl" id="audioIcon">music_note</span>
+    </button>
+    <button id="soundFxBtn"
+      class="p-1.5 sm:p-2 text-[#665590] hover:text-[#805062] rounded-full hover:bg-[#FFD9E4]/60 transition-all hover:scale-110 active:scale-95 flex items-center"
+      title="Toggle Sound FX">
+      <span class="material-symbols-outlined text-lg sm:text-xl" id="soundFxIcon">volume_up</span>
+    </button>
+    <button onclick="triggerMegaCelebration('navbar')"
+      class="bg-gradient-to-r from-[#FF4081] to-[#805062] text-white px-3 sm:px-4 py-1 sm:py-1.5 rounded-full font-label font-bold text-[11px] sm:text-xs tracking-wide hover:from-[#E91E63] hover:to-[#65394b] transition-all hover:scale-105 active:scale-95 shadow-md flex items-center space-x-1.5 cursor-pointer">
+      <span class="hidden sm:inline">Celebrate</span>
+      <span class="animate-bounce">🎉</span>
+    </button>
+  </div>
+
+  <main class="pt-16 sm:pt-20 max-w-6xl mx-auto px-4 sm:px-6 space-y-24">
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative pt-6 pb-8" id="hero">
+      <!-- Decorative Washi & Badges -->
+      <div class="absolute -top-2 left-4 -rotate-3 z-10 hidden sm:block">
+        <div class="washi-tape-peach px-3 py-1 font-label text-xs font-bold text-[#755844] rounded-sm shadow-sm">
+          18 Years of soothadis ✨
+        </div>
+      </div>
+      <div class="absolute top-4 right-4 rotate-3 hidden md:block z-10">
+        <div
+          class="bg-[#FFD9E4] text-[#805062] px-3.5 py-1.5 rounded-full font-label text-xs font-bold border border-white sticker-drop flex items-center space-x-1">
+          <span>🌸 Forever mine</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          <div
+            class="inline-flex items-center space-x-2 px-4 py-1.5 bg-[#FEC1D6]/50 rounded-full border border-[#F2B6CB]">
+            <span class="text-xs font-label font-bold text-[#7B4C5E]">🎂 The World became worse 18 Years Ago</span>
+          </div>
+
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl text-[#665590] tracking-tight leading-tight">
+            Happy Birthday, <br />
+            <span
+              class="font-handwriting text-6xl sm:text-7xl lg:text-8xl text-[#805062] block pt-2 underline decoration-[#FEC1D6] decoration-wavy">
+              Nandika! 🌸
+            </span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-[#49454F] max-w-xl leading-relaxed">
+            Happy 18th Bday my love, I hope you have an amazing day today. I hope you enjoy the gifts and this small
+            website I made for you.
+          </p>
+
+          <!-- Hero Pinned Polaroids of Nandika (Duo Keepsake) -->
+          <div class="flex flex-wrap items-center gap-3">
+            <div
+              class="inline-flex items-center space-x-3.5 p-2.5 bg-white/90 backdrop-blur-sm rounded-2xl border border-[#EAE4DB] polaroid-shadow -rotate-2 hover:rotate-0 hover:scale-105 transition-all cursor-pointer"
+              onclick="openSinglePhoto('nands/IMG-20260625-WA0092.jpg', 'Rawr Rawr 🕷️💅')">
+              <div
+                class="relative w-16 h-20 rounded-xl overflow-hidden border border-[#E6E2DB] bg-[#F2EDE6] flex-shrink-0 shadow-inner">
+                <img src="nands/IMG-20260625-WA0092.jpg" alt="Rawr Rawr 🕷️💅" class="w-full h-full object-cover">
+              </div>
+              <div class="pr-2 space-y-0.5">
+                <p class="font-handwriting text-2xl text-[#805062] font-bold">Rawr Rawr 🕷️💅</p>
+                <p class="text-[11px] font-label font-medium text-[#7A7580]">Biggest headache fr</p>
+              </div>
+            </div>
+
+            <!-- Tucked Second Candid Polaroid -->
+            <div
+              class="hidden sm:inline-flex items-center space-x-3 p-2 bg-white/90 backdrop-blur-sm rounded-2xl border border-[#EAE4DB] polaroid-shadow rotate-2 hover:rotate-0 hover:scale-105 transition-all cursor-pointer"
+              onclick="openSinglePhoto('nands/IMG_20260627_002755_181.jpg', 'You got games on your phone? 🐟📸')">
+              <div
+                class="relative w-14 h-16 rounded-xl overflow-hidden border border-[#E6E2DB] bg-[#F2EDE6] flex-shrink-0 shadow-inner">
+                <img src="nands/IMG_20260627_002755_181.jpg" alt="You got games on your phone? 🐟📸"
+                  class="w-full h-full object-cover">
+              </div>
+              <div class="pr-1.5 space-y-0.5">
+                <p class="font-handwriting text-xl text-[#665590] font-bold">You got games on your phone? 🐟📸</p>
+                <p class="text-[10px] font-label text-[#7A7580]">Warmest smile ever</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone Counter Stats with Tucked Photobooth Snaps -->
+          <div class="relative max-w-md pt-2">
+            <div class="grid grid-cols-3 gap-3">
+              <div
+                class="bg-white p-3.5 rounded-2xl polaroid-shadow border border-[#E6E2DB] text-center -rotate-1 hover:rotate-0 transition-transform">
+                <span class="block font-display text-2xl font-bold text-[#665590]">18</span>
+                <span class="text-xs font-label font-semibold text-[#7A7580]">Years of serrupadis</span>
+              </div>
+              <div
+                class="bg-white p-3.5 rounded-2xl polaroid-shadow border border-[#E6E2DB] text-center rotate-2 hover:rotate-0 transition-transform">
+                <span class="block font-display text-2xl font-bold text-[#805062]">6,574+</span>
+                <span class="text-xs font-label font-semibold text-[#7A7580]">Days of drama</span>
+              </div>
+              <div
+                class="bg-white p-3.5 rounded-2xl polaroid-shadow border border-[#E6E2DB] text-center -rotate-2 hover:rotate-0 transition-transform">
+                <span class="block font-display text-2xl font-bold text-[#755844]">∞</span>
+                <span class="text-xs font-label font-semibold text-[#7A7580]">Happy Wishes</span>
+              </div>
+            </div>
+
+            <!-- Tucked Mini Photobooth Ticket Badge -->
+            <div
+              class="absolute -bottom-7 right-2 hidden md:flex items-center space-x-1.5 bg-[#FEF9F2] p-1.5 rounded-xl border border-[#EAE4DB] polaroid-shadow rotate-3 hover:rotate-0 hover:scale-110 transition-all cursor-pointer z-10"
+              onclick="openSinglePhoto('nands/IMG-20260625-WA0009.jpg', 'Kinder Joy happiness 🍫🥚💐')">
+              <img src="nands/IMG-20260625-WA0009.jpg" class="w-8 h-8 rounded-lg object-cover">
+              <span class="text-[10px] font-handwriting text-[#805062] font-bold pr-1">Day 1 Cutie 💕</span>
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="flex flex-wrap items-center gap-3 pt-3">
+            <a href="#candles"
+              class="px-6 py-3 bg-[#805062] text-white rounded-full font-label font-bold text-sm hover:bg-[#65394B] transition-all hover:scale-105 active:scale-95 shadow-md flex items-center space-x-2">
+              <span>Blow the Candles</span>
+              <span class="material-symbols-outlined text-base">cake</span>
+            </a>
+            <a href="#memories"
+              class="px-6 py-3 bg-[#E8DEF8] text-[#4D3D76] rounded-full font-label font-bold text-sm hover:bg-[#D0BCFF] transition-all hover:scale-105 border border-[#D0BCFF]/60 flex items-center space-x-1.5">
+              <span>Explore Scrapbook</span>
+              <span>📸</span>
+            </a>
+            <a href="#forever"
+              class="px-5 py-3 bg-[#FFD9E4] text-[#880E4F] rounded-full font-label font-bold text-sm hover:bg-[#FEC1D6] transition-all hover:scale-105 border border-[#F2B6CB] flex items-center space-x-1.5 shadow-sm">
+              <span>Forever Us 💍</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Hero: Interactive Vinyl Player -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div
+            class="w-full max-w-sm bg-white p-6 rounded-3xl polaroid-shadow border border-[#E6E2DB] relative rotate-1 hover:rotate-0 transition-all duration-300">
+            <!-- Washi tape at top -->
+            <div class="washi-tape-lavender absolute -top-3 left-1/2 -translate-x-1/2 w-28 h-6 rounded-sm -rotate-2">
+            </div>
+
+            <!-- Pinned Polaroid on Vinyl Player Deck (Bottom Left) -->
+            <div
+              class="absolute -bottom-5 -left-4 w-20 bg-white p-1.5 pb-3 rounded-lg polaroid-shadow border border-[#EAE4DB] -rotate-6 z-20 hover:rotate-0 hover:scale-110 transition-all cursor-pointer"
+              onclick="openSinglePhoto('nands/IMG_20260627_002745_852.jpg', 'Tree root conqueror 🌳🦸‍♀️')">
+              <div class="washi-tape-peach absolute -top-2 left-1/2 -translate-x-1/2 w-10 h-3 rounded-xs"></div>
+              <img src="nands/IMG_20260627_002745_852.jpg" alt="Tree root conqueror 🌳🦸‍♀️"
+                class="w-full aspect-square object-cover rounded">
+              <p class="text-[8px] font-handwriting text-center text-[#805062] pt-1 font-bold">Tree root conqueror
+                🌳🦸‍♀️</p>
+            </div>
+
+            <!-- Second Taped Polaroid on Deck (Top Right) -->
+            <div
+              class="hidden sm:block absolute -top-5 -right-5 w-20 bg-white p-1.5 pb-2.5 rounded-lg polaroid-shadow border border-[#EAE4DB] rotate-6 z-20 hover:rotate-0 hover:scale-110 transition-all cursor-pointer"
+              onclick="openSinglePhoto('nands/IMG_20260627_002816_231.jpg', 'Fluffball doggy chaos 🐶👧')">
+              <div class="washi-tape-lavender absolute -top-2 left-1/2 -translate-x-1/2 w-10 h-2.5 rounded-xs"></div>
+              <div class="w-full aspect-square rounded overflow-hidden bg-[#F2EDE6]">
+                <img src="nands/IMG_20260627_002816_231.jpg" alt="Fluffball doggy chaos 🐶👧"
+                  class="w-full h-full object-cover">
+              </div>
+              <p class="text-[8px] font-handwriting text-center text-[#665590] pt-1 font-bold">Fluffball doggy chaos
+                🐶👧</p>
+            </div>
+
+            <div class="flex items-center justify-between border-b border-[#F2EDE6] pb-3 mb-4">
+              <div class="flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#805062] animate-pulse"></span>
+                <span class="font-label text-xs font-bold text-[#805062]">Now Playing: Birthday Lofi Box 🎶</span>
+              </div>
+              <span class="text-[10px] font-mono bg-[#F2EDE6] px-2 py-0.5 rounded text-[#7A7580]">LO-FI DECK</span>
+            </div>
+
+            <!-- Vinyl Record & Needle -->
+            <div class="relative flex items-center justify-center my-6">
+              <div
+                class="w-40 h-40 rounded-full bg-[#2B292E] border-4 border-[#3E3A42] flex items-center justify-center spinning-vinyl shadow-xl relative overflow-hidden"
+                id="vinylDisc">
+                <!-- Grooves -->
+                <div
+                  class="w-32 h-32 rounded-full border border-dashed border-[#5A5561]/60 flex items-center justify-center">
+                  <div
+                    class="w-24 h-24 rounded-full border border-dotted border-[#6E6877]/50 flex items-center justify-center">
+                    <div
+                      class="w-16 h-16 rounded-full bg-[#FFD9E4] flex items-center justify-center border-2 border-white shadow-md">
+                      <span class="text-sm">🎂</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tone Arm Needle -->
+              <div
+                class="absolute -right-2 -top-1 w-14 h-16 pointer-events-none transition-transform duration-500 origin-top-right"
+                id="toneArm">
+                <div class="w-1.5 h-16 bg-[#8A8494] rotate-[35deg] rounded-full shadow"></div>
+              </div>
+            </div>
+
+            <!-- Track Info -->
+            <div class="text-center space-y-1">
+              <h3 class="font-heading text-lg font-bold text-[#665590]">Sweet 18 Memories</h3>
+              <p class="font-label text-xs text-[#7A7580]">Lofi Music Box • Happy Birthday Tune</p>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="mt-4 space-y-1">
+              <div class="w-full bg-[#F2EDE6] h-1.5 rounded-full overflow-hidden cursor-pointer" id="progressTrack">
+                <div class="bg-[#805062] h-full rounded-full w-1/3 transition-all duration-300" id="songProgressBar">
+                </div>
+              </div>
+              <div class="flex justify-between text-[11px] font-mono text-[#7A7580]">
+                <span id="currTrackTime">00:42</span>
+                <span id="totalTrackTime">02:10</span>
+              </div>
+            </div>
+
+            <!-- Player Controls -->
+            <div class="flex items-center justify-between pt-4">
+              <button class="text-[#7A7580] hover:text-[#665590] p-1.5 transition-colors"
+                onclick="previousSongPrompt()">
+                <span class="material-symbols-outlined text-2xl">skip_previous</span>
+              </button>
+              <button
+                class="w-11 h-11 bg-[#805062] text-white rounded-full flex items-center justify-center hover:scale-105 active:scale-95 transition-all shadow-md"
+                id="playPauseBtn">
+                <span class="material-symbols-outlined text-2xl" id="playPauseIcon">pause</span>
+              </button>
+              <button class="text-[#7A7580] hover:text-[#665590] p-1.5 transition-colors" onclick="nextSongPrompt()">
+                <span class="material-symbols-outlined text-2xl">skip_next</span>
+              </button>
+              <div class="flex items-center space-x-1.5 w-20">
+                <span class="material-symbols-outlined text-lg text-[#7A7580]">volume_up</span>
+                <input type="range" id="volumeSlider" min="0" max="100" value="80"
+                  class="w-full h-1 bg-[#F2EDE6] accent-[#805062] rounded-lg">
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. POLAROID PHOTO SCRAPBOOK -->
+    <section class="pt-6 scroll-mt-24 space-y-8" id="memories">
+      <div class="text-center max-w-xl mx-auto space-y-2">
+        <div class="inline-block px-3 py-1 bg-[#FFDCC5] text-[#684D39] rounded-full text-xs font-label font-bold">
+          Pinned Moments & Memories
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-[#665590]">
+          Capturing Every Sweet Chapter 📸
+        </h2>
+        <p class="text-sm sm:text-base text-[#49454F]">
+          Click any polaroid to zoom in and relive the moment. You can also open the full scrapbook album to see all 60+
+          memories!
+        </p>
+      </div>
+
+      <!-- Polaroid Grid (8 Featured Memories) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-2" id="polaroidGrid">
+
+        <!-- Card 1 -->
+        <div
+          class="polaroid-card group bg-white p-3.5 pt-4 pb-6 rounded-2xl polaroid-shadow border border-[#EAE4DB] transform -rotate-3 hover:rotate-0 hover:-translate-y-2 transition-all duration-300 relative cursor-pointer"
+          data-caption="Desert tongue menace 👅🐪" data-date="Day 1 Rebel • Dad's Menace">
+          <div class="washi-tape-peach absolute -top-3 left-1/3 -translate-x-1/2 w-20 h-5 rounded-sm"></div>
+          <div
+            class="relative overflow-hidden rounded-xl aspect-[4/5] bg-[#F2EDE6] flex items-center justify-center shadow-inner">
+            <img src="nands/IMG-20260624-WA0016.jpg" alt="Desert tongue menace 👅🐪"
+              class="polaroid-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute bottom-2 right-2 bg-white/90 px-2 py-0.5 rounded-full text-[10px] font-label font-bold text-[#805062] shadow-sm">
+              👅 Rebel
+            </div>
+            <div
+              class="drop-overlay hidden absolute inset-0 bg-[#805062]/70 text-white flex flex-col items-center justify-center text-xs font-label">
+              <span>Drop image to replace</span>
+            </div>
+          </div>
+          <div class="pt-4 text-center">
+            <p class="font-handwriting text-2xl text-[#1D1C18] font-bold">Desert tongue menace 👅🐪</p>
+            <span class="text-xs font-label text-[#7A7580]">Day 1 Rebel • Dad's Menace</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="polaroid-card group bg-white p-3.5 pt-4 pb-6 rounded-2xl polaroid-shadow border border-[#EAE4DB] transform rotate-2 hover:rotate-0 hover:-translate-y-2 transition-all duration-300 relative cursor-pointer"
+          data-caption="Little fairy 🌱🧚‍♀️" data-date="Kolusu Clinking • Bush Fairy">
+          <div class="washi-tape-lavender absolute -top-3 left-2/3 -translate-x-1/2 w-20 h-5 rounded-sm rotate-2"></div>
+          <div
+            class="relative overflow-hidden rounded-xl aspect-[4/5] bg-[#F2EDE6] flex items-center justify-center shadow-inner">
+            <img src="nands/IMG_20260627_002658_617.jpg" alt="Little fairy 🌱🧚‍♀️"
+              class="polaroid-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute top-2 left-2 bg-white/90 px-2 py-0.5 rounded-full text-[10px] font-label font-bold text-[#665590] shadow-sm">
+              🧚‍♀️ Fairy
+            </div>
+            <div
+              class="drop-overlay hidden absolute inset-0 bg-[#805062]/70 text-white flex flex-col items-center justify-center text-xs font-label">
+              <span>Drop image to replace</span>
+            </div>
+          </div>
+          <div class="pt-4 text-center">
+            <p class="font-handwriting text-2xl text-[#1D1C18] font-bold">Little fairy 🌱🧚‍♀️</p>
+            <span class="text-xs font-label text-[#7A7580]">Kolusu Clinking • Bush Fairy</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="polaroid-card group bg-white p-3.5 pt-4 pb-6 rounded-2xl polaroid-shadow border border-[#EAE4DB] transform -rotate-2 hover:rotate-0 hover:-translate-y-2 transition-all duration-300 relative cursor-pointer"
+          data-caption="Krishna who? 🦚🧈" data-date="Lord Krishna • Butter Thief">
+          <div class="washi-tape-peach absolute -top-3 left-1/4 -translate-x-1/2 w-20 h-5 rounded-sm -rotate-3"></div>
+          <div
+            class="relative overflow-hidden rounded-xl aspect-[4/5] bg-[#F2EDE6] flex items-center justify-center shadow-inner">
+            <img src="nands/IMG-20260716-WA0028.jpg" alt="Krishna who? 🦚🧈"
+              class="polaroid-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute bottom-2 left-2 bg-white/90 px-2 py-0.5 rounded-full text-[10px] font-label font-bold text-[#7B4C5E] shadow-sm">
+              🦚 Butter Thief
+            </div>
+            <div
+              class="drop-overlay hidden absolute inset-0 bg-[#805062]/70 text-white flex flex-col items-center justify-center text-xs font-label">
+              <span>Drop image to replace</span>
+            </div>
+          </div>
+          <div class="pt-4 text-center">
+            <p class="font-handwriting text-2xl text-[#1D1C18] font-bold">Krishna who? 🦚🧈</p>
+            <span class="text-xs font-label text-[#7A7580]">Lord Krishna • Butter Thief</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="polaroid-card group bg-white p-3.5 pt-4 pb-6 rounded-2xl polaroid-shadow border border-[#EAE4DB] transform rotate-3 hover:rotate-0 hover:-translate-y-2 transition-all duration-300 relative cursor-pointer"
+          data-caption="Campus cutie 🚲🎒" data-date="Campus Diva • Pout Master">
+          <div class="washi-tape-lavender absolute -top-3 right-1/4 translate-x-1/2 w-20 h-5 rounded-sm rotate-1"></div>
+          <div
+            class="relative overflow-hidden rounded-xl aspect-[4/5] bg-[#F2EDE6] flex items-center justify-center shadow-inner">
+            <img src="nands/IMG-20260804-WA0004.jpg" alt="Campus cutie 🚲🎒"
+              class="polaroid-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute top-2 right-2 bg-white/90 px-2 py-0.5 rounded-full text-[10px] font-label font-bold text-[#805062] shadow-sm">
+              🚲 Campus Diva
+            </div>
+            <div
+              class="drop-overlay hidden absolute inset-0 bg-[#805062]/70 text-white flex flex-col items-center justify-center text-xs font-label">
+              <span>Drop image to replace</span>
+            </div>
+          </div>
+          <div class="pt-4 text-center">
+            <p class="font-handwriting text-2xl text-[#1D1C18] font-bold">Campus cutie 🚲🎒</p>
+            <span class="text-xs font-label text-[#7A7580]">Campus Diva • Pout Master</span>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div
+          class="polaroid-card group bg-white p-3.5 pt-4 pb-6 rounded-2xl polaroid-shadow border border-[#EAE4DB] transform rotate-1 hover:rotate-0 hover:-translate-y-2 transition-all duration-300 relative cursor-pointer"
+          data-caption="Needs her 3rd year mech🤟💙" data-date="College Drip • Spidey Power">
+          <div class="washi-tape-peach absolute -top-3 left-1/3 -translate-x-1/2 w-20 h-5 rounded-sm -rotate-1"></div>
+          <div
+            class="relative overflow-hidden rounded-xl aspect-[4/5] bg-[#F2EDE6] flex items-center justify-center shadow-inner">
+            <img src="nands/IMG-20260817-WA0011.jpg" alt="Needs her 3rd year mech🤟💙"
+              class="polaroid-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute bottom-2 right-2 bg-white/90 px-2 py-0.5 rounded-full text-[10px] font-label font-bold text-[#805062] shadow-sm">
+              🤟 Spidey
+            </div>
+          </div>
+          <div class="pt-4 text-center">
+            <p class="font-handwriting text-2xl text-[#1D1C18] font-bold">Needs her 3rd year mech🤟💙</p>
+            <span class="text-xs font-label text-[#7A7580]">College Drip • Spidey Power</span>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div
+          class="polaroid-card group bg-white p-3.5 pt-4 pb-6 rounded-2xl polaroid-shadow border border-[#EAE4DB] transform -rotate-3 hover:rotate-0 hover:-translate-y-2 transition-all duration-300 relative cursor-pointer"
+          data-caption="Brokest mall queen 🛍️💙" data-date="Mall Spree • Zero Regrets">
+          <div class="washi-tape-lavender absolute -top-3 left-2/3 -translate-x-1/2 w-20 h-5 rounded-sm rotate-2"></div>
+          <div
+            class="relative overflow-hidden rounded-xl aspect-[4/5] bg-[#F2EDE6] flex items-center justify-center shadow-inner">
+            <img src="nands/IMG_20260627_003047_926.jpg" alt="Brokest mall queen 🛍️💙"
+              class="polaroid-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute top-2 left-2 bg-white/90 px-2 py-0.5 rounded-full text-[10px] font-label font-bold text-[#665590] shadow-sm">
+              🛍️ Mall Queen
+            </div>
+          </div>
+          <div class="pt-4 text-center">
+            <p class="font-handwriting text-2xl text-[#1D1C18] font-bold">Brokest mall queen 🛍️💙</p>
+            <span class="text-xs font-label text-[#7A7580]">Mall Spree • Zero Regrets</span>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div
+          class="polaroid-card group bg-white p-3.5 pt-4 pb-6 rounded-2xl polaroid-shadow border border-[#EAE4DB] transform rotate-2 hover:rotate-0 hover:-translate-y-2 transition-all duration-300 relative cursor-pointer"
+          data-caption="Hi cutie 👀👗" data-date="Trial Room • Sassy Stare">
+          <div class="washi-tape-peach absolute -top-3 left-1/4 -translate-x-1/2 w-20 h-5 rounded-sm"></div>
+          <div
+            class="relative overflow-hidden rounded-xl aspect-[4/5] bg-[#F2EDE6] flex items-center justify-center shadow-inner">
+            <img src="nands/IMG-20260906-WA0340.jpg" alt="Hi cutie 👀👗"
+              class="polaroid-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute bottom-2 left-2 bg-white/90 px-2 py-0.5 rounded-full text-[10px] font-label font-bold text-[#7B4C5E] shadow-sm">
+              👗 Side-Eye
+            </div>
+          </div>
+          <div class="pt-4 text-center">
+            <p class="font-handwriting text-2xl text-[#1D1C18] font-bold">Hi cutie 👀👗</p>
+            <span class="text-xs font-label text-[#7A7580]">Trial Room • Sassy Stare</span>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div
+          class="polaroid-card group bg-white p-3.5 pt-4 pb-6 rounded-2xl polaroid-shadow border border-[#EAE4DB] transform -rotate-1 hover:rotate-0 hover:-translate-y-2 transition-all duration-300 relative cursor-pointer"
+          data-caption="Messi's #1 menace ⚽🩷" data-date="Messi Jersey • Tongue Out">
+          <div class="washi-tape-lavender absolute -top-3 right-1/4 translate-x-1/2 w-20 h-5 rounded-sm rotate-2"></div>
+          <div
+            class="relative overflow-hidden rounded-xl aspect-[4/5] bg-[#F2EDE6] flex items-center justify-center shadow-inner">
+            <img src="nands/IMG-20260912-WA0079.jpg" alt="Messi's #1 menace ⚽🩷"
+              class="polaroid-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute top-2 right-2 bg-white/90 px-2 py-0.5 rounded-full text-[10px] font-label font-bold text-[#805062] shadow-sm">
+              ⚽ Messi Fan
+            </div>
+          </div>
+          <div class="pt-4 text-center">
+            <p class="font-handwriting text-2xl text-[#1D1C18] font-bold">Messi's #1 menace ⚽🩷</p>
+            <span class="text-xs font-label text-[#7A7580]">Messi Jersey • Tongue Out</span>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div
+          class="polaroid-card group bg-white p-3.5 pt-4 pb-6 rounded-2xl polaroid-shadow border border-[#EAE4DB] transform rotate-2 hover:rotate-0 hover:-translate-y-2 transition-all duration-300 relative cursor-pointer"
+          data-caption="Pink cupcake baby 🧁👑" data-date="Plastic Throne • Boss Baby">
+          <div class="washi-tape-peach absolute -top-3 left-1/3 -translate-x-1/2 w-20 h-5 rounded-sm -rotate-2"></div>
+          <div
+            class="relative overflow-hidden rounded-xl aspect-[4/5] bg-[#F2EDE6] flex items-center justify-center shadow-inner">
+            <img src="nands/IMG_20260627_003033_355.jpg" alt="Pink cupcake baby 🧁👑"
+              class="polaroid-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute bottom-2 right-2 bg-white/90 px-2 py-0.5 rounded-full text-[10px] font-label font-bold text-[#805062] shadow-sm">
+              🧁 Cupcake
+            </div>
+          </div>
+          <div class="pt-4 text-center">
+            <p class="font-handwriting text-2xl text-[#1D1C18] font-bold">Pink cupcake baby 🧁👑</p>
+            <span class="text-xs font-label text-[#7A7580]">Plastic Throne • Boss Baby</span>
+          </div>
+        </div>
+
+        <!-- Card 10 -->
+        <div
+          class="polaroid-card group bg-white p-3.5 pt-4 pb-6 rounded-2xl polaroid-shadow border border-[#EAE4DB] transform -rotate-2 hover:rotate-0 hover:-translate-y-2 transition-all duration-300 relative cursor-pointer"
+          data-caption="Boss baby night patrol 🕶️👶" data-date="Midnight Patrol • Do Not Cross">
+          <div class="washi-tape-lavender absolute -top-3 left-2/3 -translate-x-1/2 w-20 h-5 rounded-sm rotate-1"></div>
+          <div
+            class="relative overflow-hidden rounded-xl aspect-[4/5] bg-[#F2EDE6] flex items-center justify-center shadow-inner">
+            <img src="nands/IMG_20260627_003036_343.jpg" alt="Boss baby night patrol 🕶️👶"
+              class="polaroid-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute top-2 left-2 bg-white/90 px-2 py-0.5 rounded-full text-[10px] font-label font-bold text-[#665590] shadow-sm">
+              🕶️ Boss Baby
+            </div>
+          </div>
+          <div class="pt-4 text-center">
+            <p class="font-handwriting text-2xl text-[#1D1C18] font-bold">Boss baby night patrol 🕶️👶</p>
+            <span class="text-xs font-label text-[#7A7580]">Midnight Patrol • Do Not Cross</span>
+          </div>
+        </div>
+
+        <!-- Card 11 -->
+        <div
+          class="polaroid-card group bg-white p-3.5 pt-4 pb-6 rounded-2xl polaroid-shadow border border-[#EAE4DB] transform rotate-3 hover:rotate-0 hover:-translate-y-2 transition-all duration-300 relative cursor-pointer"
+          data-caption="Jee Sottaya jee? 💁‍♀️🪜" data-date="Staircase Glam • Caught Laughing">
+          <div class="washi-tape-peach absolute -top-3 left-1/4 -translate-x-1/2 w-20 h-5 rounded-sm rotate-2"></div>
+          <div
+            class="relative overflow-hidden rounded-xl aspect-[4/5] bg-[#F2EDE6] flex items-center justify-center shadow-inner">
+            <img src="nands/IMG_20260627_003051_779.jpg" alt="Jee Sottaya jee? 💁‍♀️🪜"
+              class="polaroid-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute bottom-2 left-2 bg-white/90 px-2 py-0.5 rounded-full text-[10px] font-label font-bold text-[#7B4C5E] shadow-sm">
+              💁‍♀️ Hair Drama
+            </div>
+          </div>
+          <div class="pt-4 text-center">
+            <p class="font-handwriting text-2xl text-[#1D1C18] font-bold">Jee Sottaya jee? 💁‍♀️🪜</p>
+            <span class="text-xs font-label text-[#7A7580]">Staircase Glam • Caught Laughing</span>
+          </div>
+        </div>
+
+        <!-- Card 12 -->
+        <div
+          class="polaroid-card group bg-white p-3.5 pt-4 pb-6 rounded-2xl polaroid-shadow border border-[#EAE4DB] transform -rotate-1 hover:rotate-0 hover:-translate-y-2 transition-all duration-300 relative cursor-pointer"
+          data-caption="1st birthday confusion 🎂👶" data-date="Turning 1 • Tiara Confused">
+          <div class="washi-tape-lavender absolute -top-3 right-1/4 translate-x-1/2 w-20 h-5 rounded-sm -rotate-2">
+          </div>
+          <div
+            class="relative overflow-hidden rounded-xl aspect-[4/5] bg-[#F2EDE6] flex items-center justify-center shadow-inner">
+            <img src="nands/IMG_20260627_003134_782.jpg" alt="1st birthday confusion 🎂👶"
+              class="polaroid-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div
+              class="absolute top-2 right-2 bg-white/90 px-2 py-0.5 rounded-full text-[10px] font-label font-bold text-[#805062] shadow-sm">
+              👑 1st Bday
+            </div>
+          </div>
+          <div class="pt-4 text-center">
+            <p class="font-handwriting text-2xl text-[#1D1C18] font-bold">1st birthday confusion 🎂👶</p>
+            <span class="text-xs font-label text-[#7A7580]">Turning 1 • Tiara Confused</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scattered Highlights Tucked in Memories -->
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+        <div
+          class="inline-flex items-center space-x-2.5 bg-white/90 p-2 px-3 rounded-2xl border border-[#EAE4DB] polaroid-shadow -rotate-2 hover:rotate-0 hover:scale-105 transition-all cursor-pointer"
+          onclick="openSinglePhoto('nands/IMG_20260627_002904_587.jpg', 'Caught with snacks 🍪😂')">
+          <img src="nands/IMG_20260627_002904_587.jpg" class="w-10 h-12 object-cover rounded-lg shadow-inner">
+          <div class="text-left">
+            <span class="text-xs font-handwriting text-[#805062] font-bold block leading-tight">Caught with snacks
+              🍪😂</span>
+            <span class="text-[10px] text-[#7A7580]">Aesthetic Memory</span>
+          </div>
+        </div>
+
+        <div
+          class="inline-flex items-center space-x-2.5 bg-white/90 p-2 px-3 rounded-2xl border border-[#EAE4DB] polaroid-shadow rotate-2 hover:rotate-0 hover:scale-105 transition-all cursor-pointer"
+          onclick="openSinglePhoto('nands/Snapchat-168940691.jpg', 'Jumpscare 👻👹')">
+          <img src="nands/Snapchat-168940691.jpg" class="w-10 h-12 object-cover rounded-lg shadow-inner">
+          <div class="text-left">
+            <span class="text-xs font-handwriting text-[#665590] font-bold block leading-tight">Jumpscare 👻👹</span>
+            <span class="text-[10px] text-[#7A7580]">Pure Joy</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Row: Full Scrapbook Roll Trigger -->
+      <div class="text-center pt-2 flex flex-wrap items-center justify-center gap-4">
+        <button onclick="openAllPhotosGallery()"
+          class="px-7 py-3 bg-[#E8DEF8] text-[#4D3D76] rounded-full font-label font-bold text-xs sm:text-sm hover:bg-[#D0BCFF] transition-all hover:scale-105 active:scale-95 shadow-md border border-[#D0BCFF] flex items-center space-x-2">
+          <span class="material-symbols-outlined text-base">photo_library</span>
+          <span>Browse All 64 Scattered Scrapbook Snaps ✨</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 2B. VINTAGE 35MM FILMSTRIP & VIDEO REELS -->
+    <section class="pt-6 scroll-mt-24 space-y-6" id="reels">
+      <div class="text-center max-w-xl mx-auto space-y-2">
+        <div class="inline-block px-3 py-1 bg-[#FFD9E4] text-[#805062] rounded-full text-xs font-label font-bold">
+          Random vids I found on my camera roll
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-[#665590]">
+          Living Memories: Nandika In Motion 🎬✨
+        </h2>
+        <p class="text-sm sm:text-base text-[#49454F]">
+          Because pictures capture moments, but videos keep your laughter, voice, and spontaneous energy alive forever!
+        </p>
+      </div>
+
+      <!-- Filmstrip Reel Frame -->
+      <div class="filmstrip-reel rounded-3xl p-4 sm:p-7 relative overflow-hidden">
+        <div class="washi-tape-peach absolute top-3 left-8 w-28 h-5 rounded-sm -rotate-2 z-20"></div>
+        <div class="washi-tape-lavender absolute top-3 right-8 w-28 h-5 rounded-sm rotate-2 z-20"></div>
+
+        <!-- Featured 4 Video Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 my-4">
+
+          <!-- Video Card 1 -->
+          <div
+            class="bg-[#1D1C18] p-3 rounded-2xl border border-white/20 polaroid-shadow group relative flex flex-col justify-between">
+            <div class="relative overflow-hidden rounded-xl aspect-[9/16] bg-black reel-video-container">
+              <video src="nands/VID-20260726-WA0022.mp4" playsinline preload="none" class="w-full h-full object-cover"
+                id="reelVid1"></video>
+              <div
+                class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all flex items-center justify-center cursor-pointer reel-play-overlay"
+                onclick="toggleVideoPlayback('reelVid1')">
+                <div
+                  class="w-12 h-12 bg-white/80 rounded-full flex items-center justify-center text-[#805062] shadow-lg group-hover:scale-110 transition-transform reel-play-btn">
+                  <span class="material-symbols-outlined text-2xl" id="reelIcon-reelVid1">play_arrow</span>
+                </div>
+              </div>
+              <button type="button"
+                class="absolute top-2 right-2 w-7 h-7 rounded-lg bg-black/60 hover:bg-[#805062] text-white flex items-center justify-center transition-colors z-10 shadow-md"
+                title="Watch full screen"
+                onclick="event.stopPropagation(); playVideoInModal('nands/VID-20260726-WA0022.mp4', 'Jumpscare 1 👻👹')">
+                <span class="material-symbols-outlined text-sm">open_in_full</span>
+              </button>
+            </div>
+            <div class="pt-3 text-white text-center">
+              <p class="font-handwriting text-xl text-[#FFD8BE] font-bold">Jumpscare 1 👻👹</p>
+              <p class="text-[10px] font-label text-white/70">Tap to play & listen</p>
+            </div>
+          </div>
+
+          <!-- Video Card 2 -->
+          <div
+            class="bg-[#1D1C18] p-3 rounded-2xl border border-white/20 polaroid-shadow group relative flex flex-col justify-between">
+            <div class="relative overflow-hidden rounded-xl aspect-[9/16] bg-black reel-video-container">
+              <video src="nands/VID-20260727-WA0007.mp4" playsinline preload="none" class="w-full h-full object-cover"
+                id="reelVid2"></video>
+              <div
+                class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all flex items-center justify-center cursor-pointer reel-play-overlay"
+                onclick="toggleVideoPlayback('reelVid2')">
+                <div
+                  class="w-12 h-12 bg-white/80 rounded-full flex items-center justify-center text-[#805062] shadow-lg group-hover:scale-110 transition-transform reel-play-btn">
+                  <span class="material-symbols-outlined text-2xl" id="reelIcon-reelVid2">play_arrow</span>
+                </div>
+              </div>
+              <button type="button"
+                class="absolute top-2 right-2 w-7 h-7 rounded-lg bg-black/60 hover:bg-[#805062] text-white flex items-center justify-center transition-colors z-10 shadow-md"
+                title="Watch full screen"
+                onclick="event.stopPropagation(); playVideoInModal('nands/VID-20260727-WA0007.mp4', 'Jumpscare 2 👻👹')">
+                <span class="material-symbols-outlined text-sm">open_in_full</span>
+              </button>
+            </div>
+            <div class="pt-3 text-white text-center">
+              <p class="font-handwriting text-xl text-[#FFD8BE] font-bold">Jumpscare 2 👻👹</p>
+              <p class="text-[10px] font-label text-white/70">Tap to play & listen</p>
+            </div>
+          </div>
+
+          <!-- Video Card 3 -->
+          <div
+            class="bg-[#1D1C18] p-3 rounded-2xl border border-white/20 polaroid-shadow group relative flex flex-col justify-between">
+            <div class="relative overflow-hidden rounded-xl aspect-[9/16] bg-black reel-video-container">
+              <video src="nands/VID-20260806-WA0004.mp4" playsinline preload="none" class="w-full h-full object-cover"
+                id="reelVid3"></video>
+              <div
+                class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all flex items-center justify-center cursor-pointer reel-play-overlay"
+                onclick="toggleVideoPlayback('reelVid3')">
+                <div
+                  class="w-12 h-12 bg-white/80 rounded-full flex items-center justify-center text-[#805062] shadow-lg group-hover:scale-110 transition-transform reel-play-btn">
+                  <span class="material-symbols-outlined text-2xl" id="reelIcon-reelVid3">play_arrow</span>
+                </div>
+              </div>
+              <button type="button"
+                class="absolute top-2 right-2 w-7 h-7 rounded-lg bg-black/60 hover:bg-[#805062] text-white flex items-center justify-center transition-colors z-10 shadow-md"
+                title="Watch full screen"
+                onclick="event.stopPropagation(); playVideoInModal('nands/VID-20260806-WA0004.mp4', 'Jumpscare 3 👻👹')">
+                <span class="material-symbols-outlined text-sm">open_in_full</span>
+              </button>
+            </div>
+            <div class="pt-3 text-white text-center">
+              <p class="font-handwriting text-xl text-[#FFD8BE] font-bold">Jumpscare 3 👻👹</p>
+              <p class="text-[10px] font-label text-white/70">Tap to play & listen</p>
+            </div>
+          </div>
+
+          <!-- Video Card 4 -->
+          <div
+            class="bg-[#1D1C18] p-3 rounded-2xl border border-white/20 polaroid-shadow group relative flex flex-col justify-between">
+            <div class="relative overflow-hidden rounded-xl aspect-[9/16] bg-black reel-video-container">
+              <video src="nands/VID-20260905-WA0251.mp4" playsinline preload="none" class="w-full h-full object-cover"
+                id="reelVid4"></video>
+              <div
+                class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all flex items-center justify-center cursor-pointer reel-play-overlay"
+                onclick="toggleVideoPlayback('reelVid4')">
+                <div
+                  class="w-12 h-12 bg-white/80 rounded-full flex items-center justify-center text-[#805062] shadow-lg group-hover:scale-110 transition-transform reel-play-btn">
+                  <span class="material-symbols-outlined text-2xl" id="reelIcon-reelVid4">play_arrow</span>
+                </div>
+              </div>
+              <button type="button"
+                class="absolute top-2 right-2 w-7 h-7 rounded-lg bg-black/60 hover:bg-[#805062] text-white flex items-center justify-center transition-colors z-10 shadow-md"
+                title="Watch full screen"
+                onclick="event.stopPropagation(); playVideoInModal('nands/VID-20260905-WA0251.mp4', 'Jumpscare 4 👻👹')">
+                <span class="material-symbols-outlined text-sm">open_in_full</span>
+              </button>
+            </div>
+            <div class="pt-3 text-white text-center">
+              <p class="font-handwriting text-xl text-[#FFD8BE] font-bold">Jumpscare 4 👻👹</p>
+              <p class="text-[10px] font-label text-white/70">Tap to play & listen</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Living Memory Video Cards -->
+        <div class="mt-5">
+          <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 gap-3">
+            <!-- Living Memory: Summer Laughs -->
+            <div
+              class="bg-black/60 p-2.5 rounded-2xl border border-white/20 hover:border-amber-300/80 transition-all group flex flex-col justify-between">
+              <div class="relative rounded-xl overflow-hidden aspect-[9/16] bg-black shadow-inner reel-video-container">
+                <video src="nands/VID-20260714-WA0027.mp4" playsinline preload="none" class="w-full h-full object-cover"
+                  id="reelVid5"></video>
+                <div
+                  class="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-all flex items-center justify-center cursor-pointer reel-play-overlay"
+                  onclick="toggleVideoPlayback('reelVid5')">
+                  <div
+                    class="w-9 h-9 rounded-full bg-white/85 group-hover:bg-white text-[#805062] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform reel-play-btn">
+                    <span class="material-symbols-outlined text-xl" id="reelIcon-reelVid5">play_arrow</span>
+                  </div>
+                </div>
+                <button type="button"
+                  class="absolute top-1.5 right-1.5 w-6 h-6 rounded-md bg-black/60 hover:bg-[#805062] text-white flex items-center justify-center transition-colors z-10"
+                  title="Watch full screen"
+                  onclick="event.stopPropagation(); playVideoInModal('nands/VID-20260714-WA0027.mp4', 'Best dancer fr ☀️')">
+                  <span class="material-symbols-outlined text-xs">open_in_full</span>
+                </button>
+              </div>
+              <div class="pt-2 text-center cursor-pointer" onclick="toggleVideoPlayback('reelVid5')">
+                <p class="text-xs font-handwriting text-[#FFD8BE] font-bold truncate">Best dancer fr ☀️</p>
+                <p class="text-[9px] font-label text-white/60 -mt-0.5">Tap to preview</p>
+              </div>
+            </div>
+
+            <!-- Living Memory: Silly Smiles -->
+            <div
+              class="bg-black/60 p-2.5 rounded-2xl border border-white/20 hover:border-amber-300/80 transition-all group flex flex-col justify-between">
+              <div class="relative rounded-xl overflow-hidden aspect-[9/16] bg-black shadow-inner reel-video-container">
+                <video src="nands/VID-20260720-WA0034.mp4" playsinline preload="none" class="w-full h-full object-cover"
+                  id="reelVid6"></video>
+                <div
+                  class="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-all flex items-center justify-center cursor-pointer reel-play-overlay"
+                  onclick="toggleVideoPlayback('reelVid6')">
+                  <div
+                    class="w-9 h-9 rounded-full bg-white/85 group-hover:bg-white text-[#805062] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform reel-play-btn">
+                    <span class="material-symbols-outlined text-xl" id="reelIcon-reelVid6">play_arrow</span>
+                  </div>
+                </div>
+                <button type="button"
+                  class="absolute top-1.5 right-1.5 w-6 h-6 rounded-md bg-black/60 hover:bg-[#805062] text-white flex items-center justify-center transition-colors z-10"
+                  title="Watch full screen"
+                  onclick="event.stopPropagation(); playVideoInModal('nands/VID-20260720-WA0034.mp4', 'Wheres my show? 🧸')">
+                  <span class="material-symbols-outlined text-xs">open_in_full</span>
+                </button>
+              </div>
+              <div class="pt-2 text-center cursor-pointer" onclick="toggleVideoPlayback('reelVid6')">
+                <p class="text-xs font-handwriting text-[#FFD8BE] font-bold truncate">Wheres my show? 🧸</p>
+                <p class="text-[9px] font-label text-white/60 -mt-0.5">Tap to preview</p>
+              </div>
+            </div>
+
+            <!-- Living Memory: Pure Moments -->
+            <div
+              class="bg-black/60 p-2.5 rounded-2xl border border-white/20 hover:border-amber-300/80 transition-all group flex flex-col justify-between">
+              <div class="relative rounded-xl overflow-hidden aspect-[9/16] bg-black shadow-inner reel-video-container">
+                <video src="nands/VID-20260727-WA0006.mp4" playsinline preload="none" class="w-full h-full object-cover"
+                  id="reelVid7"></video>
+                <div
+                  class="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-all flex items-center justify-center cursor-pointer reel-play-overlay"
+                  onclick="toggleVideoPlayback('reelVid7')">
+                  <div
+                    class="w-9 h-9 rounded-full bg-white/85 group-hover:bg-white text-[#805062] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform reel-play-btn">
+                    <span class="material-symbols-outlined text-xl" id="reelIcon-reelVid7">play_arrow</span>
+                  </div>
+                </div>
+                <button type="button"
+                  class="absolute top-1.5 right-1.5 w-6 h-6 rounded-md bg-black/60 hover:bg-[#805062] text-white flex items-center justify-center transition-colors z-10"
+                  title="Watch full screen"
+                  onclick="event.stopPropagation(); playVideoInModal('nands/VID-20260727-WA0006.mp4', 'Kuchu puchuuuu 🌸')">
+                  <span class="material-symbols-outlined text-xs">open_in_full</span>
+                </button>
+              </div>
+              <div class="pt-2 text-center cursor-pointer" onclick="toggleVideoPlayback('reelVid7')">
+                <p class="text-xs font-handwriting text-[#FFD8BE] font-bold truncate">Kuchu puchuuuu 🌸</p>
+                <p class="text-[9px] font-label text-white/60 -mt-0.5">Tap to preview</p>
+              </div>
+            </div>
+
+            <!-- Living Memory: 18th Countdown -->
+            <div
+              class="bg-black/60 p-2.5 rounded-2xl border border-white/20 hover:border-amber-300/80 transition-all group flex flex-col justify-between">
+              <div class="relative rounded-xl overflow-hidden aspect-[9/16] bg-black shadow-inner reel-video-container">
+                <video src="nands/VID-20260911-WA0003.mp4" playsinline preload="none" class="w-full h-full object-cover"
+                  id="reelVid8"></video>
+                <div
+                  class="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-all flex items-center justify-center cursor-pointer reel-play-overlay"
+                  onclick="toggleVideoPlayback('reelVid8')">
+                  <div
+                    class="w-9 h-9 rounded-full bg-white/85 group-hover:bg-white text-[#805062] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform reel-play-btn">
+                    <span class="material-symbols-outlined text-xl" id="reelIcon-reelVid8">play_arrow</span>
+                  </div>
+                </div>
+                <button type="button"
+                  class="absolute top-1.5 right-1.5 w-6 h-6 rounded-md bg-black/60 hover:bg-[#805062] text-white flex items-center justify-center transition-colors z-10"
+                  title="Watch full screen"
+                  onclick="event.stopPropagation(); playVideoInModal('nands/VID-20260911-WA0003.mp4', 'Azhagii ⏰')">
+                  <span class="material-symbols-outlined text-xs">open_in_full</span>
+                </button>
+              </div>
+              <div class="pt-2 text-center cursor-pointer" onclick="toggleVideoPlayback('reelVid8')">
+                <p class="text-xs font-handwriting text-[#FFD8BE] font-bold truncate">Azhagii ⏰</p>
+                <p class="text-[9px] font-label text-white/60 -mt-0.5">Tap to preview</p>
+              </div>
+            </div>
+
+            <!-- Living Memory: Birthday Eve -->
+            <div
+              class="bg-black/60 p-2.5 rounded-2xl border border-white/20 hover:border-amber-300/80 transition-all group flex flex-col justify-between">
+              <div class="relative rounded-xl overflow-hidden aspect-[9/16] bg-black shadow-inner reel-video-container">
+                <video src="nands/VID-20260913-WA0013.mp4" playsinline preload="none" class="w-full h-full object-cover"
+                  id="reelVid9"></video>
+                <div
+                  class="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-all flex items-center justify-center cursor-pointer reel-play-overlay"
+                  onclick="toggleVideoPlayback('reelVid9')">
+                  <div
+                    class="w-9 h-9 rounded-full bg-white/85 group-hover:bg-white text-[#805062] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform reel-play-btn">
+                    <span class="material-symbols-outlined text-xl" id="reelIcon-reelVid9">play_arrow</span>
+                  </div>
+                </div>
+                <button type="button"
+                  class="absolute top-1.5 right-1.5 w-6 h-6 rounded-md bg-black/60 hover:bg-[#805062] text-white flex items-center justify-center transition-colors z-10"
+                  title="Watch full screen"
+                  onclick="event.stopPropagation(); playVideoInModal('nands/VID-20260913-WA0013.mp4', 'Yen kanmani 🎂')">
+                  <span class="material-symbols-outlined text-xs">open_in_full</span>
+                </button>
+              </div>
+              <div class="pt-2 text-center cursor-pointer" onclick="toggleVideoPlayback('reelVid9')">
+                <p class="text-xs font-handwriting text-[#FFD8BE] font-bold truncate">Yen kanmani 🎂</p>
+                <p class="text-[9px] font-label text-white/60 -mt-0.5">Tap to preview</p>
+              </div>
+            </div>
+
+            <!-- Living Memory: Monsoon Giggles -->
+            <div
+              class="bg-black/60 p-2.5 rounded-2xl border border-white/20 hover:border-amber-300/80 transition-all group flex flex-col justify-between">
+              <div class="relative rounded-xl overflow-hidden aspect-[9/16] bg-black shadow-inner reel-video-container">
+                <video src="nands/VID-20260709-WA0009.mp4" playsinline preload="none" class="w-full h-full object-cover"
+                  id="reelVid10"></video>
+                <div
+                  class="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-all flex items-center justify-center cursor-pointer reel-play-overlay"
+                  onclick="toggleVideoPlayback('reelVid10')">
+                  <div
+                    class="w-9 h-9 rounded-full bg-white/85 group-hover:bg-white text-[#805062] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform reel-play-btn">
+                    <span class="material-symbols-outlined text-xl" id="reelIcon-reelVid10">play_arrow</span>
+                  </div>
+                </div>
+                <button type="button"
+                  class="absolute top-1.5 right-1.5 w-6 h-6 rounded-md bg-black/60 hover:bg-[#805062] text-white flex items-center justify-center transition-colors z-10"
+                  title="Watch full screen"
+                  onclick="event.stopPropagation(); playVideoInModal('nands/VID-20260709-WA0009.mp4', 'SNU baddieeee 🌧️')">
+                  <span class="material-symbols-outlined text-xs">open_in_full</span>
+                </button>
+              </div>
+              <div class="pt-2 text-center cursor-pointer" onclick="toggleVideoPlayback('reelVid10')">
+                <p class="text-xs font-handwriting text-[#FFD8BE] font-bold truncate">SNU baddieeee 🌧️</p>
+                <p class="text-[9px] font-label text-white/60 -mt-0.5">Tap to preview</p>
+              </div>
+            </div>
+
+            <!-- Living Memory: Playful Energy -->
+            <div
+              class="bg-black/60 p-2.5 rounded-2xl border border-white/20 hover:border-amber-300/80 transition-all group flex flex-col justify-between">
+              <div class="relative rounded-xl overflow-hidden aspect-[9/16] bg-black shadow-inner reel-video-container">
+                <video src="nands/VID_20260626_133236_711.mp4" playsinline preload="none"
+                  class="w-full h-full object-cover" id="reelVid11"></video>
+                <div
+                  class="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-all flex items-center justify-center cursor-pointer reel-play-overlay"
+                  onclick="toggleVideoPlayback('reelVid11')">
+                  <div
+                    class="w-9 h-9 rounded-full bg-white/85 group-hover:bg-white text-[#805062] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform reel-play-btn">
+                    <span class="material-symbols-outlined text-xl" id="reelIcon-reelVid11">play_arrow</span>
+                  </div>
+                </div>
+                <button type="button"
+                  class="absolute top-1.5 right-1.5 w-6 h-6 rounded-md bg-black/60 hover:bg-[#805062] text-white flex items-center justify-center transition-colors z-10"
+                  title="Watch full screen"
+                  onclick="event.stopPropagation(); playVideoInModal('nands/VID_20260626_133236_711.mp4', 'Paddippiii 🌸')">
+                  <span class="material-symbols-outlined text-xs">open_in_full</span>
+                </button>
+              </div>
+              <div class="pt-2 text-center cursor-pointer" onclick="toggleVideoPlayback('reelVid11')">
+                <p class="text-xs font-handwriting text-[#FFD8BE] font-bold truncate">Paddippiii 🌸</p>
+                <p class="text-[9px] font-label text-white/60 -mt-0.5">Tap to preview</p>
+              </div>
+            </div>
+
+            <!-- Living Memory: Midnight Magic -->
+            <div
+              class="bg-black/60 p-2.5 rounded-2xl border border-white/20 hover:border-amber-300/80 transition-all group flex flex-col justify-between">
+              <div class="relative rounded-xl overflow-hidden aspect-[9/16] bg-black shadow-inner reel-video-container">
+                <video src="nands/VID_20260709_004212_835.mp4" playsinline preload="none"
+                  class="w-full h-full object-cover" id="reelVid12"></video>
+                <div
+                  class="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-all flex items-center justify-center cursor-pointer reel-play-overlay"
+                  onclick="toggleVideoPlayback('reelVid12')">
+                  <div
+                    class="w-9 h-9 rounded-full bg-white/85 group-hover:bg-white text-[#805062] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform reel-play-btn">
+                    <span class="material-symbols-outlined text-xl" id="reelIcon-reelVid12">play_arrow</span>
+                  </div>
+                </div>
+                <button type="button"
+                  class="absolute top-1.5 right-1.5 w-6 h-6 rounded-md bg-black/60 hover:bg-[#805062] text-white flex items-center justify-center transition-colors z-10"
+                  title="Watch full screen"
+                  onclick="event.stopPropagation(); playVideoInModal('nands/VID_20260709_004212_835.mp4', 'Pretty little Bitch 🌙')">
+                  <span class="material-symbols-outlined text-xs">open_in_full</span>
+                </button>
+              </div>
+              <div class="pt-2 text-center cursor-pointer" onclick="toggleVideoPlayback('reelVid12')">
+                <p class="text-xs font-handwriting text-[#FFD8BE] font-bold truncate">Pretty little Bitch 🌙</p>
+                <p class="text-[9px] font-label text-white/60 -mt-0.5">Tap to preview</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. INTERACTIVE BIRTHDAY CAKE & CANDLE BLOWING -->
+    <section class="pt-6 scroll-mt-24 relative" id="candles">
+      <div
+        class="bg-gradient-to-b from-[#FFFDF9] to-[#F8F3EC] border border-[#EAE4DB] p-6 sm:p-10 rounded-3xl polaroid-shadow relative overflow-hidden text-center">
+        <!-- Ambient Glow Backdrop -->
+        <div
+          class="absolute -top-12 left-1/2 -translate-x-1/2 w-80 h-80 bg-[#FFD9E4]/40 rounded-full blur-3xl pointer-events-none">
+        </div>
+
+        <!-- Pinned Memory Beside Cake (Right) -->
+        <div
+          class="hidden md:block absolute top-6 right-6 w-28 bg-white p-2 pb-4 rounded-2xl polaroid-shadow border border-[#EAE4DB] rotate-3 hover:rotate-0 hover:scale-105 transition-all cursor-pointer z-20"
+          onclick="openSinglePhoto('nands/IMG-20260708-WA0016.jpg', 'Grumpy puppy pout 🥺🐶')">
+          <div class="washi-tape-peach absolute -top-2 left-1/2 -translate-x-1/2 w-14 h-3 rounded-xs"></div>
+          <img src="nands/IMG-20260708-WA0016.jpg" alt="Grumpy puppy pout 🥺🐶"
+            class="w-full aspect-[4/5] object-cover rounded-lg">
+          <p class="text-[9px] font-handwriting text-center text-[#805062] pt-1.5 font-bold">Grumpy puppy pout 🥺🐶</p>
+        </div>
+
+        <!-- Pinned Memory Beside Cake (Left) -->
+        <div
+          class="hidden md:block absolute top-6 left-6 w-28 bg-white p-2 pb-4 rounded-2xl polaroid-shadow border border-[#EAE4DB] -rotate-3 hover:rotate-0 hover:scale-105 transition-all cursor-pointer z-20"
+          onclick="openSinglePhoto('nands/IMG_20260629_094724_326.jpg', 'My fingers hurt 🛒👀')">
+          <div class="washi-tape-lavender absolute -top-2 left-1/2 -translate-x-1/2 w-14 h-3 rounded-xs"></div>
+          <img src="nands/IMG_20260629_094724_326.jpg" alt="My fingers hurt 🛒👀"
+            class="w-full aspect-[4/5] object-cover rounded-lg">
+          <p class="text-[9px] font-handwriting text-center text-[#665590] pt-1.5 font-bold">My fingers hurt 🛒👀</p>
+        </div>
+
+        <!-- Bottom Sweet Tooth Sticker -->
+        <div
+          class="hidden lg:block absolute bottom-6 left-8 w-20 bg-white p-1.5 pb-2.5 rounded-xl polaroid-shadow border border-[#EAE4DB] rotate-6 hover:rotate-0 hover:scale-110 transition-all cursor-pointer z-20"
+          onclick="openSinglePhoto('nands/IMG_20260701_011719_821.jpg', 'Me when shawarma 🚗🥟')">
+          <img src="nands/IMG_20260701_011719_821.jpg" alt="Me when shawarma 🚗🥟"
+            class="w-full aspect-square object-cover rounded">
+          <p class="text-[8px] font-handwriting text-center text-[#805062] pt-0.5 font-bold">Me when shawarma 🚗🥟</p>
+        </div>
+
+        <div class="max-w-md mx-auto space-y-3 relative z-10">
+          <div
+            class="inline-flex items-center space-x-1 px-3 py-1 bg-[#E9DDFF] text-[#4D3D76] rounded-full text-xs font-label font-bold">
+            <span class="material-symbols-outlined text-sm">cake</span>
+            <span>Make a Secret Birthday Wish</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-[#665590]">Blow Out The Candles! 🎂</h2>
+
+          <!-- BIG EYE-CATCHING CALLOUT TO CLICK CANDLES -->
+          <div
+            class="py-1 px-4 bg-gradient-to-r from-[#FFD9E4]/90 via-[#FFE4EC]/90 to-[#FFD9E4]/90 rounded-2xl border-2 border-[#F2B6CB] shadow-sm max-w-sm mx-auto">
+            <p
+              class="font-display font-bold text-base sm:text-lg text-[#880E4F] animate-pulse flex items-center justify-center gap-1.5">
+              <span>👇</span>
+              <span>CLICK ON THE CANDLES TO BLOW THEM OUT!</span>
+              <span>🕯️✨</span>
+            </p>
+            <p class="text-[11px] sm:text-xs text-[#805062] font-medium pt-0.5">
+              Tap or click each candle flame directly to make your wish come true! 💖
+            </p>
+          </div>
+        </div>
+
+        <!-- Cake Illustration & Flame Physics -->
+        <div class="relative w-72 h-72 mx-auto my-4 flex flex-col items-center justify-end select-none">
+          <!-- Candles Row -->
+          <div class="flex items-end justify-center space-x-6 z-20 mb-[-4px]">
+            <!-- Candle 1 -->
+            <div class="candle-wrapper flex flex-col items-center cursor-pointer group"
+              onclick="extinguishSingleCandle('flame1')" title="Click me to blow out!">
+              <div
+                class="flame flame-active w-4 h-6 rounded-full bg-gradient-to-t from-amber-400 via-yellow-200 to-white candle-glow transition-all duration-500 group-hover:scale-125"
+                id="flame1"></div>
+              <div class="w-1 h-2 bg-stone-700"></div>
+              <div
+                class="w-4 h-12 bg-[#FEC1D6] rounded-t border-t-2 border-white/80 shadow-sm flex items-center justify-center group-hover:brightness-95">
+                <span class="text-[9px] text-[#805062] font-bold">★</span>
+              </div>
+            </div>
+
+            <!-- Center Candle '18' -->
+            <div class="candle-wrapper flex flex-col items-center cursor-pointer group"
+              onclick="extinguishSingleCandle('flame2')" title="Click me to blow out!">
+              <div
+                class="flame flame-active w-5 h-7 rounded-full bg-gradient-to-t from-amber-400 via-yellow-200 to-white candle-glow transition-all duration-500 group-hover:scale-125"
+                id="flame2"></div>
+              <div class="w-1 h-2 bg-stone-700"></div>
+              <div
+                class="w-5 h-16 bg-[#D0BCFF] rounded-t border-t-2 border-white/80 shadow-sm flex items-center justify-center group-hover:brightness-95">
+                <span class="text-[10px] text-[#4D3D76] font-bold">18</span>
+              </div>
+            </div>
+
+            <!-- Candle 3 -->
+            <div class="candle-wrapper flex flex-col items-center cursor-pointer group"
+              onclick="extinguishSingleCandle('flame3')" title="Click me to blow out!">
+              <div
+                class="flame flame-active w-4 h-6 rounded-full bg-gradient-to-t from-amber-400 via-yellow-200 to-white candle-glow transition-all duration-500 group-hover:scale-125"
+                id="flame3"></div>
+              <div class="w-1 h-2 bg-stone-700"></div>
+              <div
+                class="w-4 h-12 bg-[#FFDCC5] rounded-t border-t-2 border-white/80 shadow-sm flex items-center justify-center group-hover:brightness-95">
+                <span class="text-[9px] text-[#755844] font-bold">★</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Top Tier Cake -->
+          <div
+            class="w-40 h-16 bg-[#FFF4F6] rounded-t-2xl border-4 border-b-0 border-[#FED1DC] relative flex justify-center items-center shadow-md z-10">
+            <!-- Strawberry Toppings -->
+            <div class="absolute -top-3 flex space-x-3">
+              <span class="text-sm">🍓</span>
+              <span class="text-sm">🍓</span>
+              <span class="text-sm">🍓</span>
+            </div>
+            <div class="w-full flex justify-around px-3 text-xs opacity-75">
+              <span>✨</span>
+              <span>🌸</span>
+              <span>✨</span>
+            </div>
+          </div>
+
+          <!-- Bottom Tier Cake -->
+          <div
+            class="w-60 h-20 bg-[#FBF0EA] rounded-t-3xl border-4 border-b-0 border-[#F4CEBA] relative flex flex-col justify-center items-center shadow-lg">
+            <div class="w-full h-3 bg-[#FFD9E4]/60 rounded-full mb-1"></div>
+            <p class="font-handwriting text-2xl text-[#805062] font-bold">Blow the candles!</p>
+            <div class="flex space-x-2 text-xs opacity-60 mt-0.5">
+              <span>💛</span>
+              <span>💜</span>
+              <span>💛</span>
+            </div>
+          </div>
+
+          <!-- Cake Stand Plate -->
+          <div class="w-72 h-5 bg-[#E6E2DB] rounded-full shadow-md border-b-4 border-[#CAC4D0]"></div>
+        </div>
+
+        <!-- Wish Confirmation Banner -->
+        <div
+          class="hidden max-w-md mx-auto my-4 p-4 bg-[#E9DDFF]/80 border border-[#D0BCFF] rounded-2xl animate-fade-in"
+          id="wishConfirmation">
+          <p class="font-display text-xl text-[#665590] font-bold">✨ May your wish come true! ✨</p>
+          <p class="font-handwriting text-2xl text-[#4D3D76] pt-1">I luv uuuuuuuuuuuuuuuu :)</p>
+        </div>
+
+        <!-- Blow Action Controls -->
+        <div class="flex flex-wrap items-center justify-center gap-3 pt-4">
+          <button
+            class="px-7 py-3 bg-[#805062] text-white rounded-full font-label font-bold text-sm hover:bg-[#65394B] transition-all hover:scale-105 active:scale-95 shadow-md flex items-center space-x-2"
+            id="blowCandlesBtn" onclick="blowOutAllCandles()">
+            <span>🌬️ Blow Out All Candles!</span>
+          </button>
+          <button
+            class="px-5 py-3 bg-[#F2EDE6] text-[#7A7580] rounded-full font-label font-semibold text-xs hover:text-[#1D1C18] hover:bg-[#EAE4DB] transition-all hover:scale-105 active:scale-95"
+            onclick="reigniteCandles()">
+            <span>Relight 🕯️</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. BESTIE & COUPLES TRIVIA MINI-GAME -->
+    <section class="pt-6 scroll-mt-24 space-y-6" id="trivia">
+      <div class="text-center max-w-xl mx-auto space-y-2">
+        <div class="inline-block px-3 py-1 bg-[#FFD9E4] text-[#805062] rounded-full text-xs font-label font-bold">
+          Interactive Trivia Quiz
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-[#665590]">
+          How Well Do You Know Nandika? 🧠💖
+        </h2>
+        <p class="text-sm sm:text-base text-[#49454F]">
+          You should know all the answers so get full :)
+        </p>
+      </div>
+
+      <!-- Quiz Card Container -->
+      <div class="max-w-xl mx-auto bg-white p-6 sm:p-8 rounded-3xl polaroid-shadow border border-[#EAE4DB] relative">
+        <div class="washi-tape-peach absolute -top-3 left-10 w-28 h-5 rounded-sm -rotate-1 pointer-events-none"></div>
+        <div class="washi-tape-lavender absolute -top-3 right-10 w-28 h-5 rounded-sm rotate-1 pointer-events-none">
+        </div>
+
+        <!-- Quiz Companion Photo Sticker (Hangs outside card on desktop, never covering score/buttons) -->
+        <div
+          class="hidden lg:block absolute -top-8 -right-16 w-24 bg-white p-2 pb-3.5 rounded-xl polaroid-shadow border border-[#EAE4DB] rotate-6 hover:rotate-0 hover:scale-110 transition-all z-10 cursor-pointer shadow-md"
+          onclick="openSinglePhoto('nands/IMG_20260627_002924_058.jpg', 'Big brain padippi 🧠💪')">
+          <div class="washi-tape-lavender absolute -top-2 left-1/2 -translate-x-1/2 w-12 h-3 rounded-xs"></div>
+          <img src="nands/IMG_20260627_002924_058.jpg" alt="Big brain padippi 🧠💪"
+            class="w-full aspect-square object-cover rounded-lg">
+          <p class="text-[9px] font-handwriting text-center text-[#665590] pt-1.5 font-bold">Big brain padippi 🧠💪</p>
+        </div>
+
+        <!-- Quiz Spectator Sticker (Hangs outside card on desktop, never covering option buttons) -->
+        <div
+          class="hidden lg:block absolute -bottom-8 -left-16 w-24 bg-white p-2 pb-3.5 rounded-xl polaroid-shadow border border-[#EAE4DB] -rotate-6 hover:rotate-0 hover:scale-110 transition-all z-10 cursor-pointer shadow-md"
+          onclick="openSinglePhoto('nands/IMG_20260627_003253_695.jpg', '4-in-1 chubby cheeks 🥺🎀')">
+          <div class="washi-tape-peach absolute -top-2 left-1/2 -translate-x-1/2 w-12 h-3 rounded-xs"></div>
+          <img src="nands/IMG_20260627_003253_695.jpg" alt="4-in-1 chubby cheeks 🥺🎀"
+            class="w-full aspect-square object-cover rounded-lg">
+          <p class="text-[9px] font-handwriting text-center text-[#805062] pt-1.5 font-bold">4-in-1 chubby cheeks 🥺🎀
+          </p>
+        </div>
+
+        <!-- Full-Width Progress and Score Header -->
+        <div class="space-y-2.5 mb-6 pb-4 border-b border-[#F2EDE6]">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <span
+                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#FFD9E4] text-[#880E4F] text-xs font-bold font-mono"
+                id="quizStepBadge">1</span>
+              <span class="text-xs font-label font-bold text-[#805062]" id="quizStepIndicator">Question 1 of 5</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <span class="text-xs font-mono font-bold text-[#805062]" id="quizProgressPercent">20%</span>
+              <div
+                class="bg-[#F8F3EC] px-3.5 py-1.5 rounded-full text-xs font-label font-bold text-[#665590] border border-[#EAE4DB] shadow-2xs flex items-center gap-1.5">
+                <span>⭐</span> Score: <span id="quizScore" class="font-mono text-[#880E4F] text-sm">0</span> / 5
+              </div>
+            </div>
+          </div>
+          <!-- Full-width, smoothly animated gradient progress track -->
+          <div class="w-full bg-[#F2EDE6] h-2.5 rounded-full overflow-hidden p-0.5 border border-[#EAE4DB]/70">
+            <div
+              class="bg-gradient-to-r from-[#FF8FA3] via-[#D86B91] to-[#805062] h-full rounded-full transition-all duration-500 ease-out"
+              id="quizProgressBar" style="width: 20%;"></div>
+          </div>
+        </div>
+
+        <!-- Question Box -->
+        <div id="quizQuestionBox" class="space-y-5">
+          <h3 class="font-heading text-lg sm:text-xl font-bold text-center text-[#1D1C18]" id="questionTitle">
+            Loading question...
+          </h3>
+
+          <!-- Options List (Full width for clean text and uncompressed badges) -->
+          <div class="flex flex-col gap-2.5 sm:gap-3" id="quizOptions">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <!-- Feedback Box -->
+        <div class="hidden mt-4 p-3.5 rounded-2xl text-center font-label text-sm font-bold animate-fade-in shadow-xs"
+          id="quizFeedback"></div>
+
+        <!-- Next Question Action Button (Waits for user click) -->
+        <div id="quizNextBox" class="hidden text-center mt-5 pt-3 border-t border-[#F2EDE6]">
+          <button id="quizNextBtn" onclick="nextQuizQuestion()"
+            class="px-8 py-2.5 bg-gradient-to-r from-[#880E4F] to-[#805062] text-white font-label font-bold text-xs sm:text-sm rounded-full shadow-md hover:scale-105 active:scale-95 transition-all inline-flex items-center space-x-2">
+            <span id="quizNextBtnText">Next Question</span>
+            <span>➔</span>
+          </button>
+        </div>
+
+        <!-- Result Card (Initially Hidden) -->
+        <div class="hidden text-center py-6 space-y-4" id="quizResultBox">
+          <div
+            class="w-16 h-16 mx-auto rounded-full bg-[#FFD9E4] flex items-center justify-center text-3xl shadow-sm animate-bounce"
+            id="quizResultIcon">
+            🎖️
+          </div>
+          <p class="text-xs font-label font-bold uppercase tracking-wider text-[#880E4F]">Your Trivia Result</p>
+          <h4 class="font-display text-2xl sm:text-3xl font-bold text-[#665590]" id="quizResultTitle">Certified Nandika
+            Soulmate! 🌟</h4>
+          <div
+            class="inline-block bg-[#FFF0F5] px-4 py-1.5 rounded-full border border-[#F2B6CB] text-sm font-label font-bold text-[#805062]">
+            Score: <span id="quizFinalScore" class="font-mono text-base text-[#880E4F]">5</span> / 5 (<span
+              id="quizScorePercent">100%</span>)
+          </div>
+          <p class="text-sm sm:text-base text-[#49454F] max-w-md mx-auto" id="quizFinalMsg">
+            You know her inside and out! Every quirk, every favorite craving, and every secret smile.
+          </p>
+          <div
+            class="inline-flex items-center space-x-2 bg-[#FFF3F8] p-2 rounded-xl border border-[#F2B6CB] polaroid-shadow cursor-pointer hover:scale-105 transition-all"
+            onclick="openSinglePhoto('nands/Screenshot_20260901_223037_WhatsApp.jpg', 'Random BS ☕🗣️')">
+            <img src="nands/Screenshot_20260901_223037_WhatsApp.jpg" alt="Random BS ☕🗣️"
+              class="w-10 h-12 object-cover rounded shadow-inner">
+            <div class="text-left pr-2">
+              <span class="text-xs font-label font-bold text-[#880E4F] block">Soulmate Proof 💬</span>
+              <span class="text-[10px] text-[#7A7580]">Verified chemistry</span>
+            </div>
+          </div>
+          <div class="pt-2">
+            <button onclick="resetQuiz()"
+              class="px-6 py-2.5 bg-[#E9DDFF] text-[#4D3D76] hover:bg-[#D0BCFF] rounded-full font-label font-bold text-xs sm:text-sm transition-all shadow-xs hover:scale-105">
+              Play Again 🔄
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. MINI ARCADE: CATCH THE HEARTS & TREATS -->
+    <section class="pt-6 scroll-mt-24 space-y-6" id="mini-arcade">
+      <div class="text-center max-w-xl mx-auto space-y-2">
+        <div
+          class="inline-flex items-center space-x-1.5 px-3.5 py-1 bg-[#FFDCC5] text-[#755844] rounded-full text-xs font-label font-bold border border-[#F2B6CB]/60 shadow-xs">
+          <span>🎯</span>
+          <span>40,000 Points Challenge • Unlock Secret Message</span>
+        </div>
+        <div class="flex items-center justify-center space-x-3">
+          <img src="nands/IMG_20260627_003151_809.jpg" alt="Korangus 🍼👶"
+            class="w-11 h-11 rounded-full object-cover border-2 border-[#805062] shadow-sm animate-bounce cursor-pointer"
+            onclick="openSinglePhoto('nands/IMG_20260627_003151_809.jpg', 'Korangus 🍼👶')">
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-[#665590]">
+            Treat Catcher! 🍓🧺
+          </h2>
+        </div>
+        <p class="text-sm sm:text-base text-[#49454F]">
+          Move your basket (with mouse, arrow keys, or touch) to catch delicious treats and stack huge combos!
+          <strong>Reach 40,000 points and finish the game to unlock Mithun's secret message! 💌💍</strong>
+        </p>
+      </div>
+
+      <div class="max-w-xl mx-auto bg-white p-5 pt-6 rounded-3xl polaroid-shadow border border-[#EAE4DB] relative">
+        <!-- Floating Taped Arcade Player Polaroid (Shifted far outside card to the right on desktop, never overlapping header or timer) -->
+        <div
+          class="hidden lg:block absolute -top-6 -right-20 w-20 bg-white p-1.5 pb-2 rounded-lg polaroid-shadow border border-[#EAE4DB] rotate-12 z-20 hover:rotate-0 hover:scale-110 transition-all cursor-pointer shadow-md"
+          onclick="openSinglePhoto('nands/IMG_20260701_010638_345.jpg', 'Digicam Bitch 📷🥻')">
+          <div class="washi-tape-peach absolute -top-2 left-1/2 -translate-x-1/2 w-10 h-2.5 rounded-xs"></div>
+          <img src="nands/IMG_20260701_010638_345.jpg" alt="Digicam Bitch 📷🥻"
+            class="w-full aspect-square object-cover rounded">
+          <p class="text-[8px] font-handwriting text-center text-[#805062] pt-0.5 font-bold">Digicam Bitch 📷🥻</p>
+        </div>
+
+        <!-- Second Taped Cheerleader Polaroid (Shifted far outside card to the left on desktop) -->
+        <div
+          class="hidden lg:block absolute -bottom-6 -left-20 w-20 bg-white p-1.5 pb-2 rounded-lg polaroid-shadow border border-[#EAE4DB] -rotate-12 z-20 hover:rotate-0 hover:scale-110 transition-all cursor-pointer shadow-md"
+          onclick="openSinglePhoto('nands/IMG_20260627_202220_555.jpg', 'Sweet pink ribbons 🎀🥰')">
+          <div class="washi-tape-lavender absolute -top-2 left-1/2 -translate-x-1/2 w-10 h-2.5 rounded-xs"></div>
+          <img src="nands/IMG_20260627_202220_555.jpg" alt="Sweet pink ribbons 🎀🥰"
+            class="w-full aspect-square object-cover rounded">
+          <p class="text-[8px] font-handwriting text-center text-[#665590] pt-0.5 font-bold">Sweet pink ribbons 🎀🥰</p>
+        </div>
+
+        <!-- Arcade Header Stats & Combos (Clean, fully un-obscured row) -->
+        <div
+          class="flex flex-wrap items-center justify-between gap-2 px-3 py-2 border-b border-[#F2EDE6] mb-3 text-xs font-label font-bold bg-[#FAF7F2]/90 rounded-2xl">
+          <div class="flex items-center space-x-1 text-[#805062]">
+            <span>Score:</span>
+            <span id="arcadeScore" class="font-mono text-base font-bold text-[#880E4F]">0</span>
+          </div>
+          <div class="flex items-center space-x-1 text-[#880E4F] bg-[#FEC1D6]/40 px-2.5 py-0.5 rounded-full">
+            <span>Combo:</span>
+            <span id="arcadeCombo" class="font-mono text-sm font-bold">x0</span>
+          </div>
+          <div
+            class="flex items-center space-x-1 text-[#880E4F] bg-[#FFD9E4]/60 px-2.5 py-0.5 rounded-full border border-[#F2B6CB]">
+            <span>Target:</span>
+            <span class="font-mono text-xs sm:text-sm font-bold">40,000 pts 🎯</span>
+          </div>
+          <div class="flex items-center space-x-1 text-[#665590]">
+            <span>Best:</span>
+            <span id="arcadeBestScore" class="font-mono text-base font-bold">0</span>
+          </div>
+          <!-- Highly visible Timer Badge -->
+          <div class="flex items-center space-x-1 text-white bg-[#880E4F] px-3.5 py-1 rounded-full shadow-xs">
+            <span>⏳</span>
+            <span>Time:</span>
+            <span id="arcadeTimer" class="font-mono text-sm sm:text-base font-bold text-yellow-200">30s</span>
+          </div>
+          <button id="startArcadeBtn" onclick="startArcadeGame()"
+            class="px-3.5 py-1 bg-[#805062] hover:bg-[#65394B] text-white rounded-full transition-all hover:scale-105 active:scale-95 shadow-xs cursor-pointer">
+            Start Game 🎮
+          </button>
+        </div>
+
+        <!-- 10,000 Pt Secret Message Progress Bar -->
+        <div class="mb-2.5 px-1">
+          <div class="flex items-center justify-between text-[11px] font-label font-bold text-[#805062] mb-1">
+            <span class="flex items-center space-x-1">
+              <span id="secretLockIcon">🔒</span>
+              <span id="secretProgressLabel">Secret Message Goal (40,000 pts):</span>
+            </span>
+            <span id="secretProgressStats" class="font-mono text-[#880E4F]">0 / 40,000 pts (0%)</span>
+          </div>
+          <div class="w-full h-2.5 bg-[#F2EDE6] rounded-full overflow-hidden p-0.5 border border-[#EAE4DB]">
+            <div id="secretProgressBar"
+              class="h-full bg-gradient-to-r from-[#F48FB1] via-[#F06292] to-[#880E4F] rounded-full transition-all duration-300 shadow-xs"
+              style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <!-- Exciting Live Cheering Commentary Ticker -->
+        <div id="arcadeCommentary"
+          class="mb-3 px-3 py-1.5 rounded-2xl text-xs font-label font-bold text-center transition-all duration-300 bg-[#FFD9E4]/60 text-[#805062] flex items-center justify-center space-x-1.5 shadow-sm border border-[#F2B6CB]/40">
+          <span id="commentaryEmoji" class="text-base">🍓</span>
+          <span id="commentaryText">Reach 40,000 points and complete the game to unlock Mithun's secret message!</span>
+        </div>
+
+        <!-- Canvas for Game -->
+        <div
+          class="relative w-full h-72 sm:h-80 bg-gradient-to-b from-[#FFF9F2] to-[#FFF3E8] rounded-2xl overflow-hidden border border-[#F2EDE6] cursor-crosshair"
+          id="arcadeGameArea">
+          <canvas id="gameCanvas" class="w-full h-full block"></canvas>
+          <div id="arcadeStartOverlay"
+            class="absolute inset-0 bg-white/92 backdrop-blur-md flex flex-col items-center justify-center space-y-2.5 text-center p-4 sm:p-5 overflow-y-auto">
+            <span class="text-3xl sm:text-4xl">🍓✨🧺</span>
+            <div>
+              <h3 class="font-display font-bold text-lg sm:text-xl text-[#665590]">Catch Goodies & Reach 40,000 Points!
+              </h3>
+              <p class="text-[11px] sm:text-xs text-[#805062] font-medium pt-0.5">
+                🎮 <strong>How It Works:</strong> Slide your basket (mouse, finger drag, or ← / → arrow keys) to catch
+                falling treats within 30 seconds.
+              </p>
+            </div>
+
+            <!-- Points Distribution Badges -->
+            <div class="w-full max-w-md bg-[#FAF7F2] p-2.5 sm:p-3 rounded-2xl border border-[#EAE4DB] space-y-1.5">
+              <p class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#880E4F]">✨ Points
+                Distribution</p>
+              <div class="grid grid-cols-3 gap-1.5 text-[11px] font-label font-bold">
+                <div
+                  class="bg-white px-2 py-1 rounded-lg border border-[#F2EDE6] text-[#805062] flex items-center justify-center space-x-1">
+                  <span>🍓</span>
+                  <span>+25 pts</span>
+                </div>
+                <div
+                  class="bg-white px-2 py-1 rounded-lg border border-[#F2EDE6] text-[#E91E63] flex items-center justify-center space-x-1">
+                  <span>💖</span>
+                  <span>+35 pts</span>
+                </div>
+                <div
+                  class="bg-white px-2 py-1 rounded-lg border border-[#F2EDE6] text-[#795548] flex items-center justify-center space-x-1">
+                  <span>🧋</span>
+                  <span>+45 pts</span>
+                </div>
+                <div
+                  class="bg-white px-2 py-1 rounded-lg border border-[#F2EDE6] text-[#D81B60] flex items-center justify-center space-x-1">
+                  <span>🍰</span>
+                  <span>+65 pts</span>
+                </div>
+                <div
+                  class="bg-white px-2 py-1 rounded-lg border border-[#F2EDE6] text-[#F57F17] flex items-center justify-center space-x-1">
+                  <span>⭐</span>
+                  <span>+100 pts</span>
+                </div>
+                <div
+                  class="bg-white px-2 py-1 rounded-lg border border-[#F2EDE6] text-[#C62828] flex items-center justify-center space-x-1">
+                  <span>🌧️</span>
+                  <span>-15 (Reset)</span>
+                </div>
+              </div>
+              <p class="text-[10px] text-[#7A7580] pt-0.5">
+                🔥 <strong>Combo Multiplier:</strong> Chaining consecutive catches adds escalating combo score bonuses!
+                Secret message opens <strong>only after 40,000 pts is reached when the game timer ends</strong>!
+              </p>
+            </div>
+
+            <button onclick="startArcadeGame()"
+              class="px-7 py-2.5 bg-gradient-to-r from-[#880E4F] to-[#805062] text-white font-label font-bold text-xs sm:text-sm rounded-full shadow-md hover:scale-105 active:scale-95 transition-all">
+              Tap to Play & Reach 40,000 Pts 🔥
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5B. SWEET WORD SEARCH PUZZLE: NICKNAMES & LOVE WORDS -->
+    <section class="pt-6 scroll-mt-24 space-y-6" id="word-search">
+      <div class="text-center max-w-xl mx-auto space-y-2">
+        <div class="inline-block px-3 py-1 bg-[#E8DEF8] text-[#4D3D76] rounded-full text-xs font-label font-bold">
+          Random word search I thought of
+        </div>
+        <div class="flex items-center justify-center space-x-3">
+          <span class="text-3xl animate-bounce">🔍</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-[#665590]">
+            Word Search! 💖
+          </h2>
+          <span class="text-3xl animate-bounce" style="animation-delay: 0.2s;">🌸</span>
+        </div>
+        <p class="text-sm sm:text-base text-[#49454F]">
+          Can you find all <strong>7 of our most precious words & nicknames</strong> hidden in the grid? Drag across the
+          letters or tap the start & end letter to circle them!
+        </p>
+      </div>
+
+      <div
+        class="max-w-2xl mx-auto bg-gradient-to-b from-[#FFFDF9] to-[#FBF7F2] p-5 sm:p-8 rounded-3xl polaroid-shadow border border-[#EAE4DB] relative overflow-hidden">
+        <div class="washi-tape-peach absolute -top-2 left-10 w-28 h-5 rounded-xs -rotate-2 z-20"></div>
+        <div class="washi-tape-lavender absolute -top-2 right-10 w-28 h-5 rounded-xs rotate-2 z-20"></div>
+
+        <!-- Scattered Photo Companion (Right side) -->
+        <div
+          class="hidden lg:block absolute -bottom-2 -right-2 w-24 bg-white p-1.5 pb-3 rounded-xl polaroid-shadow border border-[#EAE4DB] rotate-6 z-20 hover:rotate-0 hover:scale-105 transition-all cursor-pointer"
+          onclick="openSinglePhoto('nands/IMG-20260625-WA0002.jpg', 'So bad camera couldnt focus 🏎️💨')">
+          <img src="nands/IMG-20260625-WA0002.jpg" alt="So bad camera couldnt focus 🏎️💨"
+            class="w-full aspect-square object-cover rounded-lg">
+          <p class="text-[8px] font-handwriting text-center text-[#805062] pt-1 font-bold">So bad camera couldnt focus
+            🏎️💨</p>
+        </div>
+
+        <!-- Scattered Photo Companion (Left side) -->
+        <div
+          class="hidden lg:block absolute -bottom-2 -left-2 w-24 bg-white p-1.5 pb-3 rounded-xl polaroid-shadow border border-[#EAE4DB] -rotate-6 z-20 hover:rotate-0 hover:scale-105 transition-all cursor-pointer"
+          onclick="openSinglePhoto('nands/IMG-20260624-WA0012.jpg', 'Blue saree angel 💙🥻')">
+          <img src="nands/IMG-20260624-WA0012.jpg" alt="Blue saree angel 💙🥻"
+            class="w-full aspect-square object-cover rounded-lg">
+          <p class="text-[8px] font-handwriting text-center text-[#665590] pt-1 font-bold">Blue saree angel 💙🥻</p>
+        </div>
+
+        <!-- Top Controls & Progress Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-4 px-1">
+          <div class="flex items-center space-x-2">
+            <span
+              class="text-xs font-label font-bold text-[#805062] bg-[#FFD9E4]/60 px-3 py-1 rounded-full border border-[#F2B6CB]">
+              Found: <span id="wsFoundCount" class="font-mono text-sm font-bold text-[#880E4F]">0</span> / 7 Words ✨
+            </span>
+          </div>
+
+          <div class="flex items-center space-x-2">
+            <button onclick="hintWordSearch()"
+              class="px-3.5 py-1.5 bg-[#FFF3D6] hover:bg-[#FFE082] text-[#755844] rounded-full text-xs font-label font-bold border border-[#FFE082] transition-all flex items-center space-x-1 shadow-xs active:scale-95 cursor-pointer">
+              <span>💡</span>
+              <span>Hint</span>
+            </button>
+            <button onclick="resetWordSearch()"
+              class="px-3.5 py-1.5 bg-[#E8DEF8] hover:bg-[#D0BCFF] text-[#4D3D76] rounded-full text-xs font-label font-bold border border-[#D0BCFF] transition-all flex items-center space-x-1 shadow-xs active:scale-95 cursor-pointer">
+              <span>🔄</span>
+              <span>Reset</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Progress Track Bar -->
+        <div class="w-full bg-[#EAE4DB]/60 h-2.5 rounded-full overflow-hidden mb-5 p-0.5">
+          <div id="wsProgressBar"
+            class="bg-gradient-to-r from-[#F48FB1] via-[#CE93D8] to-[#805062] h-full rounded-full transition-all duration-500 w-0">
+          </div>
+        </div>
+
+        <!-- The 7 Target Words Chips -->
+        <div class="mb-5">
+          <div
+            class="text-[11px] font-label font-bold text-[#7A7580] uppercase tracking-wider mb-2 flex items-center justify-between">
+            <span>Hidden Words & Nicknames:</span>
+            <span class="text-[10px] text-[#805062] lowercase">swipe or tap 1st & last letter</span>
+          </div>
+          <div class="flex flex-wrap gap-2 justify-center sm:justify-start" id="wsWordChips">
+            <!-- Chips generated by script.js -->
+          </div>
+        </div>
+
+        <!-- Word Search 10x10 Grid -->
+        <div class="flex justify-center my-2 select-none">
+          <div id="wordSearchGrid"
+            class="grid grid-cols-10 gap-1 sm:gap-1.5 max-w-[420px] w-full aspect-square p-2 sm:p-3 bg-white/90 rounded-2xl border-2 border-[#EAE4DB] shadow-inner touch-none relative">
+            <!-- Cells generated by script.js -->
+          </div>
+        </div>
+
+        <!-- Live Selection Feedback Banner -->
+        <div id="wsFeedbackBanner"
+          class="mt-4 py-2 px-4 rounded-xl text-center text-xs font-label font-bold bg-[#FFD9E4]/40 text-[#805062] min-h-[36px] flex items-center justify-center transition-all">
+          <span>✨ Tip: Tap the first letter of a word, then tap the last letter! Or swipe across them.</span>
+        </div>
+
+        <!-- Word Search Celebration Victory Message (hidden by default) -->
+        <div id="wsVictoryCard"
+          class="hidden mt-6 p-5 bg-gradient-to-r from-[#FFF0F5] to-[#F3E5F5] rounded-2xl border-2 border-[#F2B6CB] text-center space-y-3 animate-fade-in shadow-md">
+          <div class="text-4xl animate-bounce">👑💖💍</div>
+          <h3 class="font-display font-bold text-xl text-[#880E4F]">You Found All 7 Love Words, Nandika!</h3>
+          <p class="text-sm text-[#49454F] max-w-md mx-auto">
+            Every nickname and sweet word belongs to you. You are my Love, and my forever Wifey! 🌸✨
+          </p>
+          <div class="pt-1">
+            <button onclick="celebrateWordSearchWinAgain()"
+              class="px-6 py-2 bg-gradient-to-r from-[#880E4F] to-[#805062] text-white rounded-full font-label font-bold text-xs shadow-md hover:scale-105 active:scale-95 transition-all cursor-pointer">
+              Shower Confetti Again 🎉
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. REAL CANVAS SCRATCH-OFF LOVE VOUCHERS -->
+    <section class="pt-6 scroll-mt-24 space-y-8" id="vouchers">
+      <div class="text-center max-w-xl mx-auto space-y-2">
+        <div class="inline-block px-3 py-1 bg-[#FFDCC5] text-[#684D39] rounded-full text-xs font-label font-bold">
+          Scratch & Win • Lifetime Validity
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-[#665590]">
+          Surprise Birthday Perks & Coupons 🎟️✨
+        </h2>
+        <p class="text-sm sm:text-base text-[#49454F]">
+          Rub with your mouse or finger to scratch off the golden shimmer and reveal your special birthday perks!
+        </p>
+      </div>
+
+      <!-- Tickets Grid (6 Coupons) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Coupon 1: Free Food Coupon -->
+        <div
+          class="ticket-card bg-[#FFF8E1] rounded-3xl border-2 border-[#FFE082] polaroid-shadow relative overflow-hidden p-6 flex flex-col justify-between group">
+          <!-- Taped Keepsake Photo -->
+          <div
+            class="absolute -top-2 right-4 w-16 bg-white p-1 pb-2 rounded-lg polaroid-shadow border border-[#EAE4DB] rotate-6 z-20 hover:rotate-0 hover:scale-110 transition-all cursor-pointer"
+            onclick="openSinglePhoto('nands/IMG_20260627_002740_341.jpg', 'Waiting for food delivery 🍕👀')">
+            <div class="washi-tape-peach absolute -top-1.5 left-1/2 -translate-x-1/2 w-8 h-2 rounded-xs"></div>
+            <img src="nands/IMG_20260627_002740_341.jpg" alt="Waiting for food delivery 🍕👀"
+              class="w-full aspect-square object-cover rounded">
+            <p class="text-[7px] font-handwriting text-center text-[#805062] pt-0.5 font-bold">Waiting for food delivery
+              🍕👀</p>
+          </div>
+
+          <div class="space-y-2 text-left pr-14">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-label font-bold text-[#755844]">COUPON #0018-A</span>
+              <span class="text-[10px] bg-[#FFECB3] px-2 py-0.5 rounded text-[#684D39] font-mono font-bold">ONE USE
+                ONLY</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-[#1D1C18]">Free Food coupon 🍔🍟</h3>
+            <p class="text-xs text-[#49454F] leading-relaxed">
+              Ask for free food at anytime, one use only
+            </p>
+          </div>
+
+          <!-- Scratch Area -->
+          <div class="mt-6 pt-4 border-t-2 border-dashed border-[#FFE082]">
+            <div
+              class="relative w-full h-20 rounded-xl overflow-hidden shadow-inner bg-white flex items-center justify-center text-center p-2">
+              <div class="z-0">
+                <span class="font-mono text-xs font-bold text-[#805062] tracking-widest block">PASS:
+                  FREE-FOOD-ANYTIME</span>
+                <span class="text-[11px] font-handwriting text-xl text-[#880E4F] font-bold">Ask For Any Cravings!
+                  🍕✨</span>
+              </div>
+              <canvas id="scratch1" class="scratch-canvas absolute inset-0 z-10 w-full h-full cursor-pointer"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coupon 2: Veto Yes -->
+        <div
+          class="ticket-card bg-[#F3E5F5] rounded-3xl border-2 border-[#E1BEE7] polaroid-shadow relative overflow-hidden p-6 flex flex-col justify-between group">
+          <!-- Taped Keepsake Photo -->
+          <div
+            class="absolute -top-2 right-4 w-16 bg-white p-1 pb-2 rounded-lg polaroid-shadow border border-[#EAE4DB] -rotate-6 z-20 hover:rotate-0 hover:scale-110 transition-all cursor-pointer"
+            onclick="openSinglePhoto('nands/IMG_20260629_094757_441.jpg', 'Baddie No.1 🕶️💨')">
+            <div class="washi-tape-lavender absolute -top-1.5 left-1/2 -translate-x-1/2 w-8 h-2 rounded-xs"></div>
+            <img src="nands/IMG_20260629_094757_441.jpg" alt="Baddie No.1 🕶️💨"
+              class="w-full aspect-square object-cover rounded">
+            <p class="text-[7px] font-handwriting text-center text-[#665590] pt-0.5 font-bold">Baddie No.1 🕶️💨</p>
+          </div>
+
+          <div class="space-y-2 text-left pr-14">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-label font-bold text-[#665590]">COUPON #0018-B</span>
+              <span class="text-[10px] bg-[#E9DDFF] px-2 py-0.5 rounded text-[#4D3D76] font-mono font-bold">ONE USE
+                ONLY</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-[#1D1C18]">Veto yes 👑✋</h3>
+            <p class="text-xs text-[#49454F] leading-relaxed">
+              Even if I disagree or say no, your say is automatically chosen. One use only
+            </p>
+          </div>
+
+          <!-- Scratch Area -->
+          <div class="mt-6 pt-4 border-t-2 border-dashed border-[#CE93D8]">
+            <div
+              class="relative w-full h-20 rounded-xl overflow-hidden shadow-inner bg-white flex items-center justify-center text-center p-2">
+              <div class="z-0">
+                <span class="font-mono text-xs font-bold text-[#665590] tracking-widest block">PASS:
+                  VETO-YES-OVERRIDE</span>
+                <span class="text-[11px] font-handwriting text-xl text-[#665590] font-bold">Your Word Is Automatic Law!
+                  👑</span>
+              </div>
+              <canvas id="scratch2" class="scratch-canvas absolute inset-0 z-10 w-full h-full cursor-pointer"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coupon 3: Entire Day Yes -->
+        <div
+          class="ticket-card bg-[#FCE4EC] rounded-3xl border-2 border-[#F8BBD0] polaroid-shadow relative overflow-hidden p-6 flex flex-col justify-between group">
+          <!-- Taped Keepsake Photo -->
+          <div
+            class="absolute -top-2 right-4 w-16 bg-white p-1 pb-2 rounded-lg polaroid-shadow border border-[#EAE4DB] rotate-3 z-20 hover:rotate-0 hover:scale-110 transition-all cursor-pointer"
+            onclick="openSinglePhoto('nands/IMG-20260820-WA0070.jpg', 'Drama Queen 💃🖤')">
+            <div class="washi-tape-peach absolute -top-1.5 left-1/2 -translate-x-1/2 w-8 h-2 rounded-xs"></div>
+            <img src="nands/IMG-20260820-WA0070.jpg" alt="Drama Queen 💃🖤"
+              class="w-full aspect-square object-cover rounded">
+            <p class="text-[7px] font-handwriting text-center text-[#805062] pt-0.5 font-bold">Drama Queen 💃🖤</p>
+          </div>
+
+          <div class="space-y-2 text-left pr-14">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-label font-bold text-[#805062]">COUPON #0018-C</span>
+              <span class="text-[10px] bg-[#FFD9E4] px-2 py-0.5 rounded text-[#805062] font-mono font-bold">T&amp;C
+                APPLY</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-[#1D1C18]">Entire day yes 🌟🤝</h3>
+            <p class="text-xs text-[#49454F] leading-relaxed">
+              Entire day I have to say yes. T&amp;C Apply
+            </p>
+          </div>
+
+          <!-- Scratch Area -->
+          <div class="mt-6 pt-4 border-t-2 border-dashed border-[#F48FB1]">
+            <div
+              class="relative w-full h-20 rounded-xl overflow-hidden shadow-inner bg-white flex items-center justify-center text-center p-2">
+              <div class="z-0">
+                <span class="font-mono text-xs font-bold text-[#805062] tracking-widest block">PASS:
+                  ENTIRE-DAY-YES</span>
+                <span class="text-[11px] font-handwriting text-xl text-[#805062] font-bold">Full 24 Hours Of Yes!
+                  🫡💖</span>
+              </div>
+              <canvas id="scratch3" class="scratch-canvas absolute inset-0 z-10 w-full h-full cursor-pointer"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coupon 4: Immediate Attention for 1 Hour -->
+        <div
+          class="ticket-card bg-[#E0F2F1] rounded-3xl border-2 border-[#80CBC4] polaroid-shadow relative overflow-hidden p-6 flex flex-col justify-between group">
+          <!-- Taped Keepsake Photo -->
+          <div
+            class="absolute -top-2 right-4 w-16 bg-white p-1 pb-2 rounded-lg polaroid-shadow border border-[#EAE4DB] -rotate-3 z-20 hover:rotate-0 hover:scale-110 transition-all cursor-pointer"
+            onclick="openSinglePhoto('nands/IMG-20260708-WA0016.jpg', 'Grumpy puppy pout 🥺🐶')">
+            <div class="washi-tape-lavender absolute -top-1.5 left-1/2 -translate-x-1/2 w-8 h-2 rounded-xs"></div>
+            <img src="nands/IMG-20260708-WA0016.jpg" alt="Grumpy puppy pout 🥺🐶"
+              class="w-full aspect-square object-cover rounded">
+            <p class="text-[7px] font-handwriting text-center text-[#004D40] pt-0.5 font-bold">Grumpy puppy pout 🥺🐶
+            </p>
+          </div>
+
+          <div class="space-y-2 text-left pr-14">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-label font-bold text-[#00695C]">COUPON #0018-D</span>
+              <span class="text-[10px] bg-[#B2DFDB] px-2 py-0.5 rounded text-[#004D40] font-mono font-bold">ONE TIME
+                USE</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-[#1D1C18]">Immediate attention for 1 hour ⏰🧸</h3>
+            <p class="text-xs text-[#49454F] leading-relaxed">
+              Title says it, one time use only
+            </p>
+          </div>
+
+          <!-- Scratch Area -->
+          <div class="mt-6 pt-4 border-t-2 border-dashed border-[#80CBC4]">
+            <div
+              class="relative w-full h-20 rounded-xl overflow-hidden shadow-inner bg-white flex items-center justify-center text-center p-2">
+              <div class="z-0">
+                <span class="font-mono text-xs font-bold text-[#00695C] tracking-widest block">PASS:
+                  1HR-INSTANT-ATTENTION</span>
+                <span class="text-[11px] font-handwriting text-xl text-[#00695C] font-bold">Phones Down, 100% Focused!
+                  📵💖</span>
+              </div>
+              <canvas id="scratch4" class="scratch-canvas absolute inset-0 z-10 w-full h-full cursor-pointer"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coupon 5: Movie Night Voucher -->
+        <div
+          class="ticket-card bg-[#EDE7F6] rounded-3xl border-2 border-[#D1C4E9] polaroid-shadow relative overflow-hidden p-6 flex flex-col justify-between group">
+          <!-- Taped Keepsake Photo -->
+          <div
+            class="absolute -top-2 right-4 w-16 bg-white p-1 pb-2 rounded-lg polaroid-shadow border border-[#EAE4DB] rotate-6 z-20 hover:rotate-0 hover:scale-110 transition-all cursor-pointer"
+            onclick="openSinglePhoto('nands/Screenshot_20260822_143108_WhatsApp.jpg', 'Blanket burrito 🌯💤')">
+            <div class="washi-tape-peach absolute -top-1.5 left-1/2 -translate-x-1/2 w-8 h-2 rounded-xs"></div>
+            <img src="nands/Screenshot_20260822_143108_WhatsApp.jpg" alt="Blanket burrito 🌯💤"
+              class="w-full aspect-square object-cover rounded">
+            <p class="text-[7px] font-handwriting text-center text-[#4527A0] pt-0.5 font-bold">Blanket burrito 🌯💤</p>
+          </div>
+
+          <div class="space-y-2 text-left pr-14">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-label font-bold text-[#5E35B1]">COUPON #0018-E</span>
+              <span class="text-[10px] bg-[#D1C4E9] px-2 py-0.5 rounded text-[#4527A0] font-mono font-bold">SPECIAL
+                PASS</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-[#1D1C18]">Movie night voucher 🎬🍿</h3>
+            <p class="text-xs text-[#49454F] leading-relaxed">
+              Ik i havent spent as much time with you so yay
+            </p>
+          </div>
+
+          <!-- Scratch Area -->
+          <div class="mt-6 pt-4 border-t-2 border-dashed border-[#B39DDB]">
+            <div
+              class="relative w-full h-20 rounded-xl overflow-hidden shadow-inner bg-white flex items-center justify-center text-center p-2">
+              <div class="z-0">
+                <span class="font-mono text-xs font-bold text-[#5E35B1] tracking-widest block">PASS:
+                  MOVIE-NIGHT-BURRITO</span>
+                <span class="text-[11px] font-handwriting text-xl text-[#5E35B1] font-bold">All Movies &amp; Snacks
+                  Chosen By You! 🍫✨</span>
+              </div>
+              <canvas id="scratch5" class="scratch-canvas absolute inset-0 z-10 w-full h-full cursor-pointer"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coupon 6: Sleep Deprivation -->
+        <div
+          class="ticket-card bg-[#FFF0F5] rounded-3xl border-2 border-[#F48FB1] polaroid-shadow relative overflow-hidden p-6 flex flex-col justify-between group">
+          <!-- Taped Keepsake Photo -->
+          <div
+            class="absolute -top-2 right-4 w-16 bg-white p-1 pb-2 rounded-lg polaroid-shadow border border-[#EAE4DB] -rotate-4 z-20 hover:rotate-0 hover:scale-110 transition-all cursor-pointer"
+            onclick="openSinglePhoto('nands/IMG_20260627_003036_343.jpg', 'Boss baby night patrol 🕶️👶')">
+            <div class="washi-tape-lavender absolute -top-1.5 left-1/2 -translate-x-1/2 w-8 h-2 rounded-xs"></div>
+            <img src="nands/IMG_20260627_003036_343.jpg" alt="Boss baby night patrol 🕶️👶"
+              class="w-full aspect-square object-cover rounded">
+            <p class="text-[7px] font-handwriting text-center text-[#805062] pt-0.5 font-bold">Boss baby night patrol
+              🕶️👶</p>
+          </div>
+
+          <div class="space-y-2 text-left pr-14">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-label font-bold text-[#805062]">COUPON #0018-F</span>
+              <span class="text-[10px] bg-[#FCE4EC] px-2 py-0.5 rounded text-[#805062] font-mono font-bold">USE
+                WISELY</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-[#1D1C18]">Sleep deprivation 🌙🛌</h3>
+            <p class="text-xs text-[#49454F] leading-relaxed">
+              Can decide when I sleep that day, use wisely
+            </p>
+          </div>
+
+          <!-- Scratch Area -->
+          <div class="mt-6 pt-4 border-t-2 border-dashed border-[#F48FB1]">
+            <div
+              class="relative w-full h-20 rounded-xl overflow-hidden shadow-inner bg-white flex items-center justify-center text-center p-2">
+              <div class="z-0">
+                <span class="font-mono text-xs font-bold text-[#805062] tracking-widest block">PASS:
+                  SLEEP-DICTATOR-PASS</span>
+                <span class="text-[11px] font-handwriting text-xl text-[#880E4F] font-bold">Awake Till Whenever You Say!
+                  🦉💤</span>
+              </div>
+              <canvas id="scratch6" class="scratch-canvas absolute inset-0 z-10 w-full h-full cursor-pointer"></canvas>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. GRAND FINALE: GIFT BOX & WAX-SEALED LOVE LETTER -->
+    <section class="pt-6 pb-12 scroll-mt-24" id="giftbox">
+      <div
+        class="bg-gradient-to-b from-[#FFFDF9] to-[#F8F3EC] p-8 sm:p-14 rounded-3xl polaroid-shadow border border-[#EAE4DB] relative overflow-hidden text-center">
+        <div class="max-w-md mx-auto space-y-3">
+          <div class="inline-block px-3 py-1 bg-[#FEC1D6] text-[#7B4C5E] rounded-full text-xs font-label font-bold">
+            One Final Sweet Surprise...
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-[#665590]">A Keepsake For You, Nandika 🎁</h2>
+          <p class="text-sm text-[#49454F]">
+            Click the gift box or untie the ribbon to unwrap your personal birthday letter!
+          </p>
+        </div>
+
+        <!-- Gift Box Graphic -->
+        <div class="relative my-8 flex flex-col items-center justify-center">
+          <div class="w-48 h-44 relative cursor-pointer hover:scale-105 transition-transform" id="giftBoxContainer"
+            onclick="toggleGiftBox()">
+            <!-- Ribbon Bow on Top -->
+            <div class="absolute -top-6 left-1/2 -translate-x-1/2 text-5xl z-20 transition-all duration-500"
+              id="giftRibbonBow">
+              🎀
+            </div>
+            <!-- Gift Box Lid -->
+            <div
+              class="w-52 h-10 bg-[#FFD9E4] rounded-xl border-2 border-[#F2B6CB] shadow-md absolute -top-2 left-1/2 -translate-x-1/2 z-10 transition-all duration-500 flex items-center justify-center"
+              id="giftBoxLid">
+              <div class="w-8 h-full bg-[#805062]"></div>
+            </div>
+            <!-- Gift Box Body -->
+            <div
+              class="w-48 h-36 bg-white rounded-b-2xl border-2 border-[#E6E2DB] shadow-xl relative overflow-hidden flex items-center justify-center">
+              <div class="w-8 h-full bg-[#805062]"></div>
+              <div class="h-8 w-full bg-[#805062]/20 absolute top-1/2 -translate-y-1/2"></div>
+              <div
+                class="absolute bottom-3 right-3 bg-[#FFDCC5] text-[#684D39] px-2 py-0.5 rounded text-[10px] font-label font-bold border border-[#755844]/30 shadow-sm -rotate-6">
+                💍 Forever
+              </div>
+            </div>
+          </div>
+
+          <!-- Unfolded Heartfelt Letter -->
+          <div
+            class="hidden mt-8 max-w-xl mx-auto bg-[#FFFDF9] p-7 sm:p-10 rounded-3xl polaroid-shadow border border-[#EAE4DB] text-left space-y-4 animate-fade-in relative"
+            id="heartfeltLetter">
+            <div class="washi-tape-peach absolute -top-3 left-1/2 -translate-x-1/2 w-28 h-6 rounded-sm"></div>
+
+            <!-- Wax Seal Icon -->
+            <div class="flex items-center justify-between border-b border-[#F2EDE6] pb-3">
+              <span class="font-handwriting text-3xl text-[#805062] font-bold"> Hi nandu,</span>
+              <div
+                class="wax-seal w-10 h-10 rounded-full bg-[#880E4F] text-white flex items-center justify-center text-xs font-serif font-bold shadow-md cursor-pointer"
+                title="Wax Seal of Love">
+                N✨
+              </div>
+            </div>
+
+            <!-- Keepsake Polaroid Pinned in Letter -->
+            <div
+              class="sm:float-right sm:ml-6 mb-4 w-36 sm:w-44 mx-auto bg-white p-2 pb-4 rounded-2xl polaroid-shadow border border-[#EAE4DB] rotate-2 hover:rotate-0 hover:scale-105 transition-all cursor-pointer"
+              onclick="openSinglePhoto('nands/IMG-20260826-WA0027.jpg', 'Golden Bitch 🌾💛')">
+              <div class="washi-tape-peach absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-3.5 rounded-xs"></div>
+              <img src="nands/IMG-20260826-WA0027.jpg" alt="Golden Bitch 🌾💛"
+                class="w-full aspect-[4/5] object-cover rounded-xl shadow-inner">
+              <p class="text-[10px] font-handwriting text-center text-[#805062] pt-1.5 font-bold">Golden Bitch 🌾💛</p>
+            </div>
+
+            <p class="text-sm sm:text-base text-[#1D1C18] leading-relaxed">
+              Happy 18th Birthday, paythiyam! I hope you loved the website and the gifts, I tried my best. I love you so
+              much. Eat good food today and try not to kill me
+            </p>
+            <p class="text-sm sm:text-base text-[#1D1C18] leading-relaxed">
+              Thank you so much for being there for me every day and dealing with all the stupid shit I do. The best
+              friend and partner I could ever wish for. I never wanna loose you. I will always be by your side
+            </p>
+            <p class="text-sm sm:text-base text-[#1D1C18] leading-relaxed">
+              I hope you have an amazing bday and year. Enjoy pannu and try to not touch your roomates :)
+            </p>
+
+            <div class="pt-4 flex flex-wrap justify-between items-end border-t border-[#F2EDE6] clear-both">
+              <div class="font-handwriting text-2xl text-[#805062] font-bold">Forever yours to keep ✨</div>
+              <span class="text-2xl">🥂🌸💖</span>
+            </div>
+
+            <!-- Scattered Photobooth Strip & Chat Keepsake -->
+            <div class="pt-4 border-t border-dashed border-[#F2EDE6] flex flex-wrap items-center justify-around gap-4">
+              <!-- Retro Photobooth Strip -->
+              <div
+                class="bg-white p-2 pb-3 rounded-xl border border-[#EAE4DB] polaroid-shadow -rotate-2 hover:rotate-0 hover:scale-105 transition-all">
+                <div class="washi-tape-peach h-2 w-16 mx-auto rounded-xs mb-1.5 opacity-80"></div>
+                <div class="flex space-x-1.5">
+                  <img src="nands/IMG_20260629_094732_811.jpg" alt="Princess 🌸🚗"
+                    class="w-12 h-14 object-cover rounded cursor-pointer"
+                    onclick="openSinglePhoto('nands/IMG_20260629_094732_811.jpg', 'Princess 🌸🚗')">
+                  <img src="nands/IMG_20260629_094801_594.jpg" alt="Desi Bitch 🦆💋"
+                    class="w-12 h-14 object-cover rounded cursor-pointer"
+                    onclick="openSinglePhoto('nands/IMG_20260629_094801_594.jpg', 'Desi Bitch 🦆💋')">
+                  <img src="nands/IMG_20260713_073025_217.jpg" alt="Hi pondatti 😼❤️"
+                    class="w-12 h-14 object-cover rounded cursor-pointer"
+                    onclick="openSinglePhoto('nands/IMG_20260713_073025_217.jpg', 'Hi pondatti 😼❤️')">
+                </div>
+                <p class="text-[9px] font-handwriting text-center text-[#805062] pt-1 font-bold">Photobooth Trio 📸✨</p>
+              </div>
+
+              <!-- Pinned Chat Screenshot Keepsake -->
+              <div
+                class="bg-white p-2 pb-3 rounded-xl border border-[#EAE4DB] polaroid-shadow rotate-2 hover:rotate-0 hover:scale-105 transition-all cursor-pointer flex items-center space-x-2.5"
+                onclick="openSinglePhoto('nands/Screenshot_20260822_143108_WhatsApp.jpg', 'Blanket burrito 🌯💤')">
+                <img src="nands/Screenshot_20260822_143108_WhatsApp.jpg"
+                  class="w-12 h-14 object-cover rounded shadow-inner">
+                <div>
+                  <p class="text-xs font-label font-bold text-[#805062]">Late Night Talks 💬</p>
+                  <p class="text-[10px] text-[#7A7580] font-normal">Our sweet conversations</p>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+          <!-- Unwrap Button -->
+          <div class="pt-6">
+            <button
+              class="px-8 py-3 bg-[#805062] text-white rounded-full font-label font-bold text-sm hover:bg-[#65394B] transition-all hover:scale-105 active:scale-95 shadow-md flex items-center space-x-2 mx-auto"
+              id="unwrapBtn" onclick="toggleGiftBox()">
+              <span>Unwrap the Gift 🎁</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. THE ETERNAL PROMISE: TILL DEATH DO US APART 💍✨ -->
+    <section class="pt-10 pb-16 scroll-mt-36 relative" id="forever">
+      <div
+        class="bg-gradient-to-b from-[#FFF9F5] via-[#FFF3F8] to-[#FFF9F5] p-8 sm:p-14 rounded-3xl polaroid-shadow border-2 border-[#F2B6CB]/70 relative overflow-hidden text-center glow-couple">
+        <!-- Ambient Glowing Starlight Backdrop -->
+        <div class="absolute -top-16 left-1/4 w-80 h-80 bg-[#FFD9E4]/50 rounded-full blur-3xl pointer-events-none">
+        </div>
+        <div class="absolute -bottom-16 right-1/4 w-80 h-80 bg-[#E9DDFF]/50 rounded-full blur-3xl pointer-events-none">
+        </div>
+
+        <!-- Section Badge -->
+        <div
+          class="inline-flex items-center space-x-2 px-4 py-1.5 bg-[#FFD9E4] text-[#880E4F] rounded-full text-xs font-label font-bold border border-white shadow-sm mb-4">
+          <span class="heartbeat-pulse">💍</span>
+          <span>Our Infinite Lifetime Promise</span>
+          <span class="heartbeat-pulse">💖</span>
+        </div>
+
+        <!-- The Grand Headline: "Till death do us apart" -->
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-[#805062] tracking-tight leading-tight">
+          Till death do us apart
+        </h2>
+        <div class="w-36 h-1 bg-gradient-to-r from-[#FFD8BE] via-[#F8BBD0] to-[#D0BCFF] mx-auto rounded-full my-3">
+        </div>
+
+        <p class="font-handwriting text-2xl sm:text-3xl text-[#880E4F] font-bold max-w-xl mx-auto pt-1">"You and me,
+          against the entire universe. Every lifetime, every heartbeat, every breath." 💍🤍</p>
+
+        <!-- Centerpiece: The Couple Picture in Grand Polaroid Frame with Flanking Memories -->
+        <div class="max-w-xl mx-auto my-8 relative flex items-center justify-center">
+          <!-- Left Flanking Romantic Memory (Desktop & Tablet) -->
+          <div
+            class="hidden lg:block absolute -left-16 top-1/2 -translate-y-1/2 w-36 bg-white p-2 pb-4 rounded-2xl polaroid-shadow border border-[#EAE4DB] -rotate-12 z-0 hover:z-30 hover:rotate-0 hover:scale-110 transition-all cursor-pointer"
+            onclick="openSinglePhoto('nands/IMG-20260902-WA0031.jpg', 'Lowk fav top 🌴❤️')">
+            <div class="washi-tape-lavender absolute -top-2 left-1/2 -translate-x-1/2 w-14 h-3 rounded-xs"></div>
+            <img src="nands/IMG-20260902-WA0031.jpg" alt="Lowk fav top 🌴❤️"
+              class="w-full aspect-[4/5] object-cover rounded-xl shadow-inner">
+            <p class="text-[9px] font-handwriting text-center text-[#805062] pt-1 font-bold">Lowk fav top 🌴❤️</p>
+          </div>
+
+          <!-- Right Flanking Romantic Memory (Desktop & Tablet) -->
+          <div
+            class="hidden lg:block absolute -right-16 top-1/2 -translate-y-1/2 w-36 bg-white p-2 pb-4 rounded-2xl polaroid-shadow border border-[#EAE4DB] rotate-12 z-0 hover:z-30 hover:rotate-0 hover:scale-110 transition-all cursor-pointer"
+            onclick="openSinglePhoto('nands/IMG_20260627_202605_469.jpg', 'Fingers taste yummy 😋👶')">
+            <div class="washi-tape-peach absolute -top-2 left-1/2 -translate-x-1/2 w-14 h-3 rounded-xs"></div>
+            <img src="nands/IMG_20260627_202605_469.jpg" alt="Fingers taste yummy 😋👶"
+              class="w-full aspect-[4/5] object-cover rounded-xl shadow-inner">
+            <p class="text-[9px] font-handwriting text-center text-[#880E4F] pt-1 font-bold">Fingers taste yummy 😋👶
+            </p>
+          </div>
+
+          <!-- Center Couple Photo Box -->
+          <div class="max-w-md w-full relative z-10">
+            <!-- Dual Corner Washi Tapes -->
+            <div class="corner-tape-tl"></div>
+            <div class="corner-tape-tr"></div>
+
+            <!-- Grand Romantic Polaroid Card -->
+            <div
+              class="polaroid-card bg-white p-5 sm:p-6 pb-8 rounded-3xl polaroid-shadow border-2 border-[#F2EDE6] transform rotate-1 hover:rotate-0 hover:scale-[1.02] transition-all duration-500 relative cursor-pointer group"
+              data-caption="Elevator drip with wifey 🥻🤍" data-date="Kasavu Drip • Always & Forever"
+              onclick="openSinglePhoto('nands/IMG-20260626-WA0036.jpg', 'Elevator drip with wifey 🥻🤍')">
+
+              <!-- Shimmering Photo Frame -->
+              <div
+                class="relative overflow-hidden rounded-2xl aspect-[4/5] bg-[#F2EDE6] border border-[#E6E2DB] shadow-inner">
+                <img src="nands/IMG-20260626-WA0036.jpg" alt="Elevator drip with wifey 🥻🤍"
+                  class="polaroid-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+
+                <!-- Soft Romantic Gradient Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60">
+                </div>
+
+                <div
+                  class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-white text-xs font-label">
+                  <span class="bg-black/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/30 font-medium">
+                    💍 Always My Forever
+                  </span>
+                  <span class="heartbeat-pulse text-lg">💖</span>
+                </div>
+              </div>
+
+              <!-- Handwritten Romantic Caption -->
+              <div class="pt-5 text-center space-y-1">
+                <p class="font-handwriting text-2xl sm:text-3xl text-[#1D1C18] font-bold">Elevator drip with wifey 🥻🤍
+                </p>
+                <p class="text-xs font-label font-bold text-[#805062] tracking-wide">
+                  Best Friends & Soulmates Forever ✨
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Romantic Dedication Card -->
+        <div
+          class="max-w-xl mx-auto bg-white/85 backdrop-blur-sm p-6 sm:p-8 rounded-3xl border border-[#F2EDE6] polaroid-shadow text-center space-y-3 relative my-6">
+          <div
+            class="wax-seal w-12 h-12 rounded-full mx-auto text-white flex items-center justify-center font-serif text-sm font-bold shadow-lg -mt-12 mb-2">
+            N&M
+          </div>
+
+          <!-- Pinned Little Heart Keepsake in Dedication -->
+          <div
+            class="inline-flex items-center space-x-2 bg-[#FFF3F8] px-3 py-1.5 rounded-full border border-[#F2B6CB] shadow-xs mb-2 cursor-pointer hover:scale-105 transition-transform"
+            onclick="openSinglePhoto('nands/IMG-20260625-WA0014.jpg', 'Would smash 🔥😎')">
+            <img src="nands/IMG-20260625-WA0014.jpg" class="w-6 h-6 rounded-full object-cover border border-[#805062]">
+            <span class="text-xs font-label font-bold text-[#880E4F]">My Favorite Person Ever 💕</span>
+          </div>
+
+          <p class="text-sm sm:text-base text-[#1D1C18] leading-relaxed">
+            No matter where life takes us, through every sunrise, every quiet storm, every late-night laugh, and every
+            dream we build, my heart will forever belong to you. (corny shit ik)
+          </p>
+          <p class="text-sm sm:text-base text-[#1D1C18] leading-relaxed font-medium">
+            Thank you for being my no.1 supporter and for always being there when I need you. Happy 18th Birthday, my
+            love.
+            Today, tomorrow, and until the end of time. I promise I'll always try to be the best partner, I hope you
+            loved this. I love you so much mwaaaaah<3 </p>
+
+
+        </div>
+
+        <!-- Interactive Celebrate Our Love Action -->
+        <div class="pt-4 flex flex-wrap items-center justify-center gap-3">
+          <button onclick="celebrateCouplePromise()"
+            class="px-8 py-3.5 bg-gradient-to-r from-[#880E4F] to-[#805062] text-white rounded-full font-label font-bold text-sm hover:from-[#65394B] hover:to-[#552739] transition-all hover:scale-105 active:scale-95 shadow-lg flex items-center space-x-2">
+            <span class="heartbeat-pulse">💖</span>
+            <span>Celebrate Our Love Forever</span>
+            <span>✨</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SCRAPBOOK FOOTER -->
+  <footer class="bg-[#F8F3EC] border-t border-[#EAE4DB] mt-20 py-10 text-center">
+    <div class="max-w-4xl mx-auto px-4 space-y-3">
+      <a href="#hero" class="font-display text-lg font-bold text-[#665590] hover:text-[#805062] transition-colors">
+        Nandika's 18th ✨
+      </a>
+      <div class="flex flex-wrap items-center justify-center gap-6 text-xs font-label text-[#7A7580]">
+        <button onclick="launchConfettiBurst()" class="hover:text-[#805062] transition-colors">🎊 Replay
+          Confetti</button>
+        <a href="#memories" class="hover:text-[#805062] transition-colors">📸 Memory Wall</a>
+        <a href="#reels" class="hover:text-[#805062] transition-colors">🎬 Video Reels</a>
+        <a href="#candles" class="hover:text-[#805062] transition-colors">🎂 Make Another Wish</a>
+        <a href="#forever" class="text-[#880E4F] font-bold hover:text-[#65394B] transition-colors">💍 Till Death Do Us
+          Apart</a>
+      </div>
+      <p class="text-xs text-[#7A7580] pt-2">
+        © Made with love by @Miithuu | All assets and media are private, not to be used elsewhere ©
+      </p>
+    </div>
+  </footer>
+
+
+
+  <!-- LIGHTBOX MODAL FOR POLAROIDS -->
+  <div id="polaroidModal"
+    class="fixed inset-0 bg-black/75 backdrop-blur-sm z-[95] hidden flex items-center justify-center p-4">
+    <div class="bg-white p-6 sm:p-8 rounded-3xl max-w-lg w-full polaroid-shadow relative animate-fade-in text-center">
+      <button onclick="closePolaroidModal()" class="absolute top-4 right-4 text-[#7A7580] hover:text-black p-1">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+      <div class="washi-tape-peach absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-5 rounded-sm"></div>
+      <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-[#F2EDE6] mb-4 shadow-inner">
+        <img id="modalImg" src="" alt="Enlarged Polaroid" class="w-full h-full object-cover">
+      </div>
+      <p id="modalCaption" class="font-handwriting text-3xl text-[#1D1C18] font-bold"></p>
+      <p id="modalDate" class="text-xs font-label text-[#7A7580] pt-1"></p>
+    </div>
+  </div>
+
+  <!-- VIDEO MODAL LIGHTBOX -->
+  <div id="videoModal"
+    class="fixed inset-0 bg-black/75 backdrop-blur-md z-[75] hidden flex items-center justify-center p-4">
+    <div
+      class="bg-[#1D1C18] p-5 sm:p-7 rounded-3xl max-w-md w-full polaroid-shadow relative animate-fade-in text-center border border-white/20">
+      <button onclick="closeVideoModal()" class="absolute top-4 right-4 text-white/70 hover:text-white p-1">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+      <div class="washi-tape-lavender absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-5 rounded-sm"></div>
+      <div class="aspect-[9/16] max-h-[70vh] rounded-2xl overflow-hidden bg-black mb-4 mx-auto shadow-2xl">
+        <video id="modalVideoPlayer" controls playsinline class="w-full h-full object-contain"></video>
+      </div>
+      <p id="modalVideoTitle" class="font-handwriting text-2xl text-[#FFD8BE] font-bold"></p>
+      <p class="text-xs font-label text-white/60 pt-1">Nandika's Living Memory Reel 🎬</p>
+    </div>
+  </div>
+
+  <!-- ALL PHOTOS SCRAPBOOK ROLL MODAL -->
+  <div id="allPhotosModal"
+    class="fixed inset-0 bg-black/70 backdrop-blur-md z-[80] hidden flex items-center justify-center p-3 sm:p-6">
+    <div
+      class="bg-[#FEF9F2] p-5 sm:p-8 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto polaroid-shadow relative animate-fade-in border border-[#EAE4DB]">
+      <div
+        class="flex items-center justify-between border-b border-[#F2EDE6] pb-3 mb-5 sticky top-0 bg-[#FEF9F2]/95 backdrop-blur-sm z-20">
+        <div class="flex items-center space-x-2">
+          <span class="text-2xl">📸</span>
+          <h3 class="font-heading text-xl font-bold text-[#665590]">All 64 Scattered Scrapbook Memories</h3>
+        </div>
+        <button onclick="closeAllPhotosGallery()"
+          class="text-[#7A7580] hover:text-[#1D1C18] p-1.5 rounded-full hover:bg-[#F2EDE6]">
+          <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+      </div>
+
+      <p class="text-xs text-[#7A7580] mb-4">Click any photo below to inspect in high-resolution zoom:</p>
+
+      <!-- Photos Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4" id="allPhotosGrid">
+        <!-- Dynamically injected via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- LETTER EDIT MODAL -->
+  <div id="letterEditorModal"
+    class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[85] hidden flex items-center justify-center p-4">
+    <div class="bg-white p-6 rounded-3xl max-w-lg w-full polaroid-shadow relative space-y-4">
+      <div class="flex justify-between items-center border-b border-[#F2EDE6] pb-2">
+        <h3 class="font-heading text-lg font-bold text-[#665590]">Customize Your Love Letter 💌</h3>
+        <button onclick="closeLetterEditor()" class="text-[#7A7580] hover:text-black">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <p class="text-xs text-[#7A7580]">Type your personal birthday message for Nandika below:</p>
+      <textarea id="customLetterInput" rows="7"
+        class="w-full p-3 border border-[#E6E2DB] rounded-2xl text-sm font-body focus:ring-2 focus:ring-[#805062] focus:outline-none"></textarea>
+      <div class="flex justify-end space-x-2">
+        <button onclick="closeLetterEditor()"
+          class="px-4 py-2 text-xs font-label font-semibold text-[#7A7580]">Cancel</button>
+        <button onclick="saveCustomLetter()"
+          class="px-5 py-2 bg-[#805062] text-white text-xs font-label font-bold rounded-full hover:bg-[#65394B]">Save
+          Message</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL SCREEN MEGA CELEBRATION TAKEOVER MODAL -->
+  <div id="megaCelebrationModal"
+    class="fixed inset-0 z-[100] hidden flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md transition-opacity duration-500 overflow-hidden select-none"
+    onclick="handleCelebrationBackdropClick(event)">
+
+    <!-- Ambient Glowing Pulsing Aura -->
+    <div class="absolute inset-0 pointer-events-none flex items-center justify-center overflow-hidden">
+      <div
+        class="w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-[#FF4081]/35 via-[#7C4DFF]/30 to-[#FFD54F]/35 blur-3xl animate-pulse">
+      </div>
+      <div id="celebrationFloatingEmojis" class="absolute inset-0 pointer-events-none"></div>
+    </div>
+
+    <!-- Celebration Pop-Out VIP Card -->
+    <div id="megaCelebrationCard"
+      class="relative z-10 max-w-xl w-full bg-gradient-to-b from-[#FFFDF9] via-white to-[#FFF0F5] rounded-3xl p-5 sm:p-8 polaroid-shadow border-2 border-[#FFD9E4] text-center space-y-3.5 sm:space-y-4 shadow-[0_0_50px_rgba(255,64,129,0.4)] transform transition-all duration-500 scale-90 opacity-0">
+
+      <!-- Top Animated VIP Badge -->
+      <div
+        class="inline-flex items-center space-x-2 px-4 py-1 rounded-full bg-gradient-to-r from-[#FF4081] via-[#E91E63] to-[#880E4F] text-white text-[11px] sm:text-xs font-label font-bold shadow-md animate-bounce">
+        <span>🔥👑</span>
+        <span id="megaCelebrationBadge">THE QUEEN TURNS 18</span>
+        <span>👑🔥</span>
+      </div>
+
+      <!-- Close Button -->
+      <button onclick="closeMegaCelebration()" aria-label="Close celebration"
+        class="absolute top-3 right-3 sm:top-4 sm:right-4 text-[#7A7580] hover:text-[#1D1C18] p-1.5 sm:p-2 rounded-full hover:bg-[#F2EDE6] transition-colors cursor-pointer">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+
+      <!-- Center Hero Showcase: Nandika & Mithun VIP Display -->
+      <div class="relative py-2 flex items-center justify-center">
+        <!-- Left Flanking Keepsake Photo -->
+        <div
+          class="hidden sm:block absolute -left-4 top-1/2 -translate-y-1/2 w-24 bg-white p-1.5 pb-3 rounded-xl polaroid-shadow border border-[#EAE4DB] -rotate-12 z-0 hover:rotate-0 hover:scale-110 transition-all cursor-pointer shadow-md"
+          onclick="openSinglePhoto('nands/IMG_20260629_094757_441.jpg', 'Baddie No.1 🕶️💨')">
+          <div class="washi-tape-peach absolute -top-1.5 left-1/2 -translate-x-1/2 w-10 h-2 rounded-xs"></div>
+          <img src="nands/IMG_20260629_094757_441.jpg" alt="Baddie No.1 🕶️💨"
+            class="w-full aspect-[4/5] object-cover rounded-lg">
+          <p class="text-[7px] font-handwriting text-center text-[#880E4F] pt-1 font-bold">Baddie No.1 🕶️💨</p>
+        </div>
+
+        <!-- Center Main Glowing Photo -->
+        <div
+          class="relative z-10 w-48 sm:w-56 bg-white p-3 pb-5 rounded-2xl polaroid-shadow border-2 border-[#FF80AB] ring-4 ring-[#FF80AB]/25 golden-glow-pulse rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer"
+          onclick="openSinglePhoto('nands/IMG-20260626-WA0036.jpg', 'Elevator drip with wifey 🥻🤍')">
+          <div class="washi-tape-lavender absolute -top-2 left-1/2 -translate-x-1/2 w-20 h-4 rounded-xs"></div>
+          <div class="aspect-[4/5] rounded-xl overflow-hidden bg-[#F2EDE6] shadow-inner relative">
+            <img id="megaCelebrationMainImg" src="nands/IMG-20260626-WA0036.jpg" alt="Elevator drip with wifey 🥻🤍"
+              class="w-full h-full object-cover">
+            <div
+              class="absolute bottom-2 left-2 right-2 bg-black/60 backdrop-blur-xs text-white text-[10px] font-label font-bold py-1 px-2.5 rounded-full flex items-center justify-between border border-white/20">
+              <span id="megaCelebrationPhotoTag">💍 Forever Us</span>
+              <span class="heartbeat-pulse text-xs">💖</span>
+            </div>
+          </div>
+          <p id="megaCelebrationPhotoCaption"
+            class="text-xs sm:text-sm font-handwriting font-bold text-[#805062] pt-2 text-center truncate px-1">Elevator
+            drip with wifey 🥻🤍</p>
+        </div>
+
+        <!-- Right Flanking Keepsake Photo -->
+        <div
+          class="hidden sm:block absolute -right-4 top-1/2 -translate-y-1/2 w-24 bg-white p-1.5 pb-3 rounded-xl polaroid-shadow border border-[#EAE4DB] rotate-12 z-0 hover:rotate-0 hover:scale-110 transition-all cursor-pointer shadow-md"
+          onclick="openSinglePhoto('nands/IMG-20260624-WA0012.jpg', 'Blue saree angel 💙🥻')">
+          <div class="washi-tape-lavender absolute -top-1.5 left-1/2 -translate-x-1/2 w-10 h-2 rounded-xs"></div>
+          <img src="nands/IMG-20260624-WA0012.jpg" alt="Blue saree angel 💙🥻"
+            class="w-full aspect-[4/5] object-cover rounded-lg">
+          <p class="text-[7px] font-handwriting text-center text-[#665590] pt-1 font-bold">Blue saree angel 💙🥻</p>
+        </div>
+      </div>
+
+      <!-- Grand Hype Typography -->
+      <div class="space-y-1">
+        <h2 id="megaCelebrationTitle" class="text-2xl sm:text-3xl font-display font-bold text-[#880E4F] tracking-tight">
+          Happy 18th Birthday, Nandika! 👑💖
+        </h2>
+        <p id="megaCelebrationSubtitle" class="text-xs sm:text-sm font-label font-bold text-[#665590]">
+          💍 To The Queen of Mithun's Heart Forever! 💍
+        </p>
+        <p id="megaCelebrationMsg" class="text-xs text-[#49454F] max-w-md mx-auto pt-0.5 leading-relaxed">
+          18 years of giving headaches to everyone! Keep being as maja as you are ✨🌸
+        </p>
+      </div>
+
+      <!-- Action Buttons & Countdown -->
+      <div class="pt-2 space-y-2.5">
+        <div class="flex items-center justify-center gap-3">
+          <button onclick="moreHypeConfetti()"
+            class="px-6 py-2.5 bg-gradient-to-r from-[#FF4081] via-[#E91E63] to-[#880E4F] text-white font-label font-bold text-xs sm:text-sm rounded-full shadow-lg hover:scale-105 active:scale-95 transition-all flex items-center space-x-1.5 cursor-pointer">
+            <span class="animate-bounce">🚀</span>
+            <span>Hype It Up More!</span>
+            <span>🎉</span>
+          </button>
+          <button onclick="closeMegaCelebration()"
+            class="px-5 py-2.5 bg-[#E8DEF8] hover:bg-[#D0BCFF] text-[#4D3D76] font-label font-bold text-xs sm:text-sm rounded-full transition-all hover:scale-105 active:scale-95 cursor-pointer">
+            Dismiss 💖
+          </button>
+        </div>
+
+        <!-- Animated Progress Countdown Bar -->
+        <div class="w-48 mx-auto bg-[#F2EDE6] h-1.5 rounded-full overflow-hidden border border-[#EAE4DB]">
+          <div id="megaCelebrationTimerBar"
+            class="bg-gradient-to-r from-[#FF4081] to-[#805062] h-full w-full transition-all duration-100 ease-linear">
+          </div>
+        </div>
+        <span class="text-[10px] text-[#A8748A] font-mono block" id="megaCelebrationTimerText">Auto-closing in
+          5s...</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Floating Love Bar & Quick Navigation -->
+  <div id="floatingLoveBar"
+    class="fixed bottom-5 right-5 z-40 flex items-center gap-2 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-full shadow-xl border border-[#F2B6CB]/60 transition-all duration-300 hover:shadow-2xl hover:border-[#FF4081]/80 hover:scale-[1.02]">
+    <button id="floatingSendLoveBtn" type="button" onclick="triggerFloatingLoveHeart(event)"
+      class="flex items-center gap-1.5 px-3.5 py-1.5 bg-gradient-to-r from-[#FF4081] via-[#E91E63] to-[#805062] hover:opacity-95 text-white rounded-full font-label font-bold text-xs shadow-md active:scale-95 transition-all cursor-pointer">
+      <span class="animate-bounce">💖</span>
+      <span>Get Love</span>
+      <span id="floatingLoveCount" class="bg-white/25 px-1.5 py-0.5 rounded-full text-[10px] font-mono">Loved x0
+        💕</span>
+    </button>
+    <div class="h-4 w-px bg-[#EAE4DB]"></div>
+    <button type="button" onclick="toggleBgmQuick()" id="floatingBgmBtn"
+      class="w-8 h-8 rounded-full bg-[#FFF0F5] hover:bg-[#FFD9E4] text-[#805062] flex items-center justify-center transition-all hover:scale-110 active:scale-95 cursor-pointer"
+      title="Toggle Background Music">
+      <span class="material-symbols-outlined text-sm" id="floatingBgmIcon">music_note</span>
+    </button>
+    <button type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+      class="w-8 h-8 rounded-full bg-[#F8F3EC] hover:bg-[#F2EDE6] text-[#49454F] flex items-center justify-center transition-all hover:scale-110 active:scale-95 cursor-pointer"
+      title="Scroll to Top">
+      <span class="material-symbols-outlined text-sm">arrow_upward</span>
+    </button>
+  </div>
+
+  <script src="script.js?v=prod_v1"></script>
+</body>
+
+</html>
