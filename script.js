@@ -313,7 +313,7 @@ function initCollapsibleSidebar() {
 
     navItems.forEach(item => {
       const href = item.getAttribute('href');
-      if (href === `#${currentId}`) {
+      if (href === ('#' + currentId)) {
         item.classList.add('nav-link-active');
       } else {
         item.classList.remove('nav-link-active');
@@ -1323,7 +1323,7 @@ try {
   localStorage.removeItem('nandika_treat_secret_unlocked');
 } catch (e) { }
 
-const ARCADE_TARGET_SCORE = 40000;
+const ARCADE_TARGET_SCORE = 10000;
 let arcadeActive = false;
 let arcadeScore = 0;
 let arcadeCombo = 0;
